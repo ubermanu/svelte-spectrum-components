@@ -55,6 +55,9 @@ dependencies:
   '@spectrum-css/popover':
     specifier: ^6.0.29
     version: 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/rating':
+    specifier: ^3.0.37
+    version: 3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/textfield':
     specifier: ^4.1.5
     version: 4.1.5(@spectrum-css/tokens@8.0.2)
@@ -743,6 +746,16 @@ packages:
     dependencies:
       '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
       '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/rating@3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-ckLqsbw60HB52ke7r9ht3pTSXUIgn5J9DzXWh72LkSMjbAq1mP/B6LEC7hnSIeUocWjhcwzAOfKSMkMaU24Hgw==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/vars': 9.0.0
     dev: false
 
   /@spectrum-css/textfield@4.1.5(@spectrum-css/tokens@8.0.2):
