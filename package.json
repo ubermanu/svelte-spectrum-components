@@ -25,6 +25,7 @@
     "@spectrum-css/icon": "^3.0.36",
     "@spectrum-css/menu": "^4.0.17",
     "@spectrum-css/page": "^5.0.20",
+    "@spectrum-css/popover": "^6.0.29",
     "@spectrum-css/textfield": "^4.1.5",
     "@spectrum-css/tokens": "^8.0.2",
     "@spectrum-css/typography": "^4.0.30",

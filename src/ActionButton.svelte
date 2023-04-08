@@ -31,6 +31,7 @@
   class:spectrum-ActionButton--staticBlack={staticBlack}
   class:is-selected={selected}
   {...rest}
+  on:click
 >
   {#if hold}
     <Icon
