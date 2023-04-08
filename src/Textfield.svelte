@@ -6,10 +6,11 @@
   export let invalid: boolean = false
   export let disabled: boolean = false
   export let quiet: boolean = false
+  export let size: 'S' | 'M' | 'L' | 'XL' = 'M'
 </script>
 
 <div
-  class="spectrum-Textfield"
+  class="spectrum-Textfield spectrum-Textfield--size{size}"
   class:spectrum-Textfield--quiet={quiet}
   class:is-disabled={disabled}
   class:is-invalid={invalid}
