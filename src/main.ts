@@ -7,6 +7,7 @@ declare global {
 export { default as Accordion } from './Accordion.svelte'
 export { default as AccordionItem } from './AccordionItem.svelte'
 export { default as ActionBar } from './ActionBar.svelte'
+export { default as ActionButton } from './ActionButton.svelte'
 export { default as Button } from './Button.svelte'
 export { default as CloseButton } from './CloseButton.svelte'
 export { default as FieldLabel } from './FieldLabel.svelte'
