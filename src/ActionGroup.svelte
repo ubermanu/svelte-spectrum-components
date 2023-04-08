@@ -1,7 +1,7 @@
 <script lang="ts">
   import '@spectrum-css/actiongroup/dist/index-vars.css'
 
-  export let size: Size = 'M'
+  export let size: TShirtSize = 'M'
   export let orientation: 'horizontal' | 'vertical' = 'horizontal'
   export let compact: boolean = false
   export let quiet: boolean = false

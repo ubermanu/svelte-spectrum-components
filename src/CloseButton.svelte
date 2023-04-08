@@ -3,7 +3,7 @@
   import Cross75 from 'svelte-spectrum-icons/ui/CrossMedium.svelte'
   import Icon from './Icon.svelte'
 
-  export let size: Size = 'M'
+  export let size: TShirtSize = 'M'
 
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false

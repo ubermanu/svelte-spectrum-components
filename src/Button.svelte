@@ -4,7 +4,7 @@
 
   export let variant: 'primary' | 'secondary' | 'accent' | 'negative' = 'accent'
 
-  export let size: 'S' | 'M' | 'L' | 'XL' = 'M'
+  export let size: TShirtSize = 'M'
 
   export let treatment: 'fill' | 'outline' = 'fill'
 

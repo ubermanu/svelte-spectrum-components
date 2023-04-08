@@ -9,7 +9,7 @@
   export let invalid: boolean = false
   export let disabled: boolean = false
   export let quiet: boolean = false
-  export let size: 'S' | 'M' | 'L' | 'XL' = 'M'
+  export let size: TShirtSize = 'M'
 </script>
 
 <div

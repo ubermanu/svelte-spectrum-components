@@ -1,7 +1,7 @@
 import './styles.css'
 
 declare global {
-  type Size = 'S' | 'M' | 'L' | 'XL'
+  type TShirtSize = 'S' | 'M' | 'L' | 'XL'
 }
 
 export { default as Accordion } from './Accordion.svelte'

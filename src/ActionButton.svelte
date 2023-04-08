@@ -6,7 +6,7 @@
 
   export let icon: SvelteComponent | undefined = undefined
 
-  export let size: Size = 'M'
+  export let size: TShirtSize = 'M'
 
   export const hold: boolean = false
 

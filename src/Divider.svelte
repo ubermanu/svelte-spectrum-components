@@ -1,7 +1,7 @@
 <script lang="ts">
   import '@spectrum-css/divider/dist/index-vars.css'
 
-  export let size: Size = 'M'
+  export let size: TShirtSize = 'M'
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
   export let vertical: boolean = false

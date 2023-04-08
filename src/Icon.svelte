@@ -4,7 +4,7 @@
 
   export let icon: SvelteComponent
 
-  export let size: 'S' | 'M' | 'L' | 'XL' = 'M'
+  export let size: TShirtSize = 'M'
 
   const { class: additionalClasses, ...rest } = $$restProps
 </script>
