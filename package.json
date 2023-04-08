@@ -16,6 +16,7 @@
     "@spectrum-css/accordion": "^3.0.37",
     "@spectrum-css/actionbar": "^6.0.15",
     "@spectrum-css/actionbutton": "^3.0.26",
+    "@spectrum-css/actiongroup": "^3.0.27",
     "@spectrum-css/button": "^9.0.14",
     "@spectrum-css/closebutton": "^3.0.26",
     "@spectrum-css/fieldlabel": "^6.0.15",
