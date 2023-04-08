@@ -19,6 +19,9 @@ dependencies:
   '@spectrum-css/actionmenu':
     specifier: ^4.0.14
     version: 4.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/badge':
+    specifier: ^3.0.14
+    version: 3.0.14(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/button':
     specifier: ^9.0.14
     version: 9.0.14(@spectrum-css/tokens@8.0.2)
@@ -579,6 +582,14 @@ packages:
       '@spectrum-css/menu': 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
       '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/badge@3.0.14(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-S+WDT9domgUbJBXXTY/fSmC4jO7w9aCSkmYrAtdLD1LSe6rAG7IfNysimb93uON0Veo5Iu3NIBFGfw+koWzVyg==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.0.2
     dev: false
 
   /@spectrum-css/button@9.0.14(@spectrum-css/tokens@8.0.2):
