@@ -10,6 +10,8 @@
   export let href: string | undefined = undefined
 
   export let current: boolean = false
+
+  export let disabled: boolean = false
 </script>
 
 <li class="spectrum-Breadcrumbs-item">
@@ -20,6 +22,7 @@
       tabindex="0"
       {href}
       aria-current={current ? 'page' : undefined}
+      class:is-disabled={disabled}
     >
       {label}
     </a>
