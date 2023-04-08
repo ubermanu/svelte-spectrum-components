@@ -20,6 +20,7 @@
   class:spectrum-Button--staticWhite={staticWhite}
   class:spectrum-Button--staticBlack={staticBlack}
   {...rest}
+  on:click
 >
   <slot name="icon" />
   <span class="spectrum-Button-label"><slot /></span>

@@ -21,6 +21,7 @@
     type="range"
     {min}
     {max}
+    {value}
     {readonly}
     aria-label={label}
   />
