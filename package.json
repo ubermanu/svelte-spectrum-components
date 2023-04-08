@@ -14,7 +14,9 @@
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
     "@spectrum-css/accordion": "^3.0.37",
+    "@spectrum-css/actionbar": "^6.0.15",
     "@spectrum-css/button": "^9.0.14",
+    "@spectrum-css/closebutton": "^3.0.26",
     "@spectrum-css/fieldlabel": "^6.0.15",
     "@spectrum-css/icon": "^3.0.36",
     "@spectrum-css/page": "^5.0.20",

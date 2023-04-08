@@ -7,9 +7,15 @@ dependencies:
   '@spectrum-css/accordion':
     specifier: ^3.0.37
     version: 3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/actionbar':
+    specifier: ^6.0.15
+    version: 6.0.15(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/actiongroup@3.0.27)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/fieldlabel@6.0.15)(@spectrum-css/icon@3.0.36)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/button':
     specifier: ^9.0.14
     version: 9.0.14(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/closebutton':
+    specifier: ^3.0.26
+    version: 3.0.26(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/fieldlabel':
     specifier: ^6.0.15
     version: 6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
@@ -501,8 +507,96 @@ packages:
       '@spectrum-css/vars': 9.0.0
     dev: false
 
+  /@spectrum-css/actionbar@6.0.15(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/actiongroup@3.0.27)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/fieldlabel@6.0.15)(@spectrum-css/icon@3.0.36)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-l/Tx8bic6i37UO4js9+hPoAugAau8zNdEV6WFEv0QpWLV1qSqN/FXuZPMy6N6l0+PEdWFGqwW1bsEDYAzmOknw==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^3.0.0
+      '@spectrum-css/actiongroup': ^3.0.0
+      '@spectrum-css/closebutton': ^3.0.0
+      '@spectrum-css/fieldlabel': ^5.0.0 || ^6.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/popover': ^5.0.0 || ^6.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/actiongroup': 3.0.27(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/closebutton': 3.0.26(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/fieldlabel': 6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/actionbutton@3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-ptcLq+ckFZw3OeOfGt6vqE9fQVZkE5Kf/SeHgK9+yUcxfMdXHMinjlpoDi8MNsSxsyXm/aHm0idLVJOXYD5EGw==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/actiongroup@3.0.27(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-3o4Flf4Oc8uqDhrbAePwtMjKq8kstDM5I8GiKWgbE4bhIf+QgUhaxpSWBYgNV28VXaRYXglW3rV6k4zUdSRbhQ==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^3.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
   /@spectrum-css/button@9.0.14(@spectrum-css/tokens@8.0.2):
     resolution: {integrity: sha512-e3Hw8C45fKNHFVA8u2bFECwcSvxu7PL12/sKSo7tzt8LDhlCB2BFvoE2IA9U7KpA/A4nli+A4XIo5N6rEgGOjQ==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/buttongroup@6.0.29(@spectrum-css/button@9.0.14)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-ZzU+Z+8W6qBrnnD2ixRwREjhC8qDpAnbVr+gcHtCKm/o85CxhgbkMcAb7A256NXDt0vuLcUuOeqR53gkaHSqCQ==}
+    peerDependencies:
+      '@spectrum-css/button': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/button': 9.0.14(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/closebutton@3.0.26(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-J5OStLy17EX7qr3IiiJY9v0/LldT8hTZyjIrfEHPHjNNzcmcIp2gfEsRv8bVJWj9VEzSNWaHE694QfL8Ux0FeQ==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/dialog@6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-66pqAHDe9aF+3CnFWXJfr5d27fZr17e58GFa0axRZq/5bExqN4nFxNdMSBh7myO2j3e9WJO5r1dldDhvJpkkFw==}
+    peerDependencies:
+      '@spectrum-css/button': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      '@spectrum-css/buttongroup': ^5.0.0 || ^6.0.0
+      '@spectrum-css/closebutton': ^1.0.0 || ^2.0.0 || ^3.0.0
+      '@spectrum-css/divider': ^1.0.0 || ^2.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/modal': ^3.0.0
+      '@spectrum-css/underlay': ^2.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/button': 9.0.14(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/buttongroup': 6.0.29(@spectrum-css/button@9.0.14)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/closebutton': 3.0.26(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/divider': 2.0.25(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/modal': 3.0.34(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/underlay': 2.0.41(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/divider@2.0.25(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-MWdFq0oUfRTICBsCSZQCnr4chAF7g6vUYtmlkS7irlvm8kn+5JsEE6+L8lGyF61INiou9B+rzDRSxlxJ7gIFdQ==}
     peerDependencies:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
@@ -527,10 +621,28 @@ packages:
       '@spectrum-css/vars': 9.0.0
     dev: false
 
+  /@spectrum-css/modal@3.0.34(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-JftnnDMyCa61V7O9OV3dlbe7Aor6r3Jv20qrYQukuLTNFDEvg6gdU0paWhJHKCOOe2oefmNwgaARLCR3lleNJg==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
   /@spectrum-css/page@5.0.20:
     resolution: {integrity: sha512-8xAtUY+iWeb1rgF4bNXt5UN1Cy4h55sgi0ldggmAgGWkjHUGKm0rGxatpgS4aN6c1SYCMRCtFHfupVJsR9Rung==}
     dependencies:
       '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/popover@6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-Qc8L8tq26RzaXQtQJp/bG1il628sKQlWKhDWskjgUf7OdRKlCl1pbCA54AC25OSfLg6z+hm576l8+fGb2yW0+Q==}
+    peerDependencies:
+      '@spectrum-css/dialog': ^6.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
     dev: false
 
   /@spectrum-css/textfield@4.1.5(@spectrum-css/tokens@8.0.2):
@@ -547,6 +659,14 @@ packages:
 
   /@spectrum-css/typography@4.0.30(@spectrum-css/vars@9.0.0):
     resolution: {integrity: sha512-XFHfdIyeP9+1hc9lKh8jg945li+Zg2BY3gAo5sOusUrM8m0Xn4jIvQBjP6VeSRcs0ZBLGafozHZOogKGjFAXBA==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/underlay@2.0.41(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-Z9emahXdaSh2JgxvSO9gCnnzaUIMpiDmi734vZkCCdNrNPGh9T0KMOPVw6cDx1Z+HyKy4vQMBdmW9dmuLUGJbQ==}
     peerDependencies:
       '@spectrum-css/vars': ^8.0.0
     dependencies:
