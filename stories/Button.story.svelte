@@ -3,23 +3,9 @@
   import { Button, Theme } from '../src/main.ts'
 
   export let Hst: Hst
-
-  let disabled = false
-  let content = 'Click me!'
 </script>
 
 <Hst.Story>
-  <Hst.Variant title="Default">
-    <Theme>
-      <Button {disabled}>
-        {content}
-      </Button>
-    </Theme>
-    <svelte:fragment slot="controls">
-      <Hst.Text bind:value={content} title="Content" />
-      <Hst.Checkbox bind:value={disabled} title="Disabled" />
-    </svelte:fragment>
-  </Hst.Variant>
   <Hst.Variant title="Sizes">
     <Theme>
       <Button size="S">Button</Button>
