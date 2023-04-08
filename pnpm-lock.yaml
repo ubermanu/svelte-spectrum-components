@@ -22,6 +22,9 @@ dependencies:
   '@spectrum-css/badge':
     specifier: ^3.0.14
     version: 3.0.14(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/breadcrumb':
+    specifier: ^7.0.14
+    version: 7.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/button':
     specifier: ^9.0.14
     version: 9.0.14(@spectrum-css/tokens@8.0.2)
@@ -589,6 +592,18 @@ packages:
     peerDependencies:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/breadcrumb@7.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-COM248cClBpQ+CHyCn0VW+BYaUq3d89pReM2rBZSueaAvGxtvDDKleB5yRbyzwb1YtfzZh0H1JtynVsAXG+tDA==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^3.0.9
+      '@spectrum-css/icon': ^3.0.27
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
