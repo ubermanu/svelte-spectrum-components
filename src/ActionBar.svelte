@@ -15,8 +15,8 @@
   class:spectrum-ActionBar--emphasized={emphasized}
   class:is-open={open}
 >
-  <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-    <CloseButton on:click={close} />
+  <div class="spectrum-Popover spectrum-ActionBar-popover" class:is-open={open}>
+    <CloseButton on:click={close} staticWhite={emphasized} />
     <slot />
   </div>
 </div>
