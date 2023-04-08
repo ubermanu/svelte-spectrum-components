@@ -16,18 +16,27 @@ dependencies:
   '@spectrum-css/actiongroup':
     specifier: ^3.0.27
     version: 3.0.27(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/actionmenu':
+    specifier: ^4.0.14
+    version: 4.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/button':
     specifier: ^9.0.14
     version: 9.0.14(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/closebutton':
     specifier: ^3.0.26
     version: 3.0.26(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/divider':
+    specifier: ^2.0.25
+    version: 2.0.25(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/fieldlabel':
     specifier: ^6.0.15
     version: 6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/icon':
     specifier: ^3.0.36
     version: 3.0.36(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/menu':
+    specifier: ^4.0.17
+    version: 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/page':
     specifier: ^5.0.20
     version: 5.0.20
@@ -553,6 +562,22 @@ packages:
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
+  /@spectrum-css/actionmenu@4.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-UFYMxcM+MV9ebF/yrC/lUiJnWOmfz7U4HJ5FxfkaLx6VQj7j0waibFBsfOZ3hDRRs+iL82+b+GY3J1PmygAL9w==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^1.0.0 || ^2.0.0 || ^3.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/menu': ^4.0.0
+      '@spectrum-css/popover': ^5.0.0 || ^6.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/menu': 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
   /@spectrum-css/button@9.0.14(@spectrum-css/tokens@8.0.2):
     resolution: {integrity: sha512-e3Hw8C45fKNHFVA8u2bFECwcSvxu7PL12/sKSo7tzt8LDhlCB2BFvoE2IA9U7KpA/A4nli+A4XIo5N6rEgGOjQ==}
     peerDependencies:
@@ -624,6 +649,18 @@ packages:
     peerDependencies:
       '@spectrum-css/vars': ^8.0.0
     dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/menu@4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-gUGw574RVEdzh5Adb4VRPHczNVs+SYiY91C++FBKtDlxw08R9sT0ayW6fNGkiEfgkWMgdd4ZtsGqqp+7hgQNIQ==}
+    peerDependencies:
+      '@spectrum-css/divider': ^1.0.0 || ^2.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/divider': 2.0.25(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
       '@spectrum-css/vars': 9.0.0
     dev: false
 
