@@ -22,6 +22,7 @@
     "@spectrum-css/breadcrumb": "^7.0.14",
     "@spectrum-css/button": "^9.0.14",
     "@spectrum-css/calendar": "^3.1.1",
+    "@spectrum-css/checkbox": "^6.0.14",
     "@spectrum-css/closebutton": "^3.0.26",
     "@spectrum-css/divider": "^2.0.25",
     "@spectrum-css/fieldlabel": "^6.0.15",
