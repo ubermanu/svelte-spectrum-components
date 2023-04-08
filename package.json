@@ -21,7 +21,8 @@
     "@spectrum-css/textfield": "^4.1.5",
     "@spectrum-css/tokens": "^8.0.2",
     "@spectrum-css/typography": "^4.0.30",
-    "@spectrum-css/vars": "^9.0.0"
+    "@spectrum-css/vars": "^9.0.0",
+    "svelte-spectrum-icons": "^2.1.0"
   },
   "devDependencies": {
     "@histoire/plugin-svelte": "^0.15.9",

@@ -31,6 +31,9 @@ dependencies:
   '@spectrum-css/vars':
     specifier: ^9.0.0
     version: 9.0.0
+  svelte-spectrum-icons:
+    specifier: ^2.1.0
+    version: 2.1.0
 
 devDependencies:
   '@histoire/plugin-svelte':
@@ -2422,6 +2425,10 @@ packages:
       svelte: 3.55.1
       typescript: 4.9.3
     dev: true
+
+  /svelte-spectrum-icons@2.1.0:
+    resolution: {integrity: sha512-ebEh61LX6UYo86LJnQ++cOMpuZZQ1EYOD3j+5Gcn+VuZ0xe+jvoWhViWdpq1EgR1vGHaG7kjPHatnFFbE8pNiQ==}
+    dev: false
 
   /svelte@3.55.1:
     resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}

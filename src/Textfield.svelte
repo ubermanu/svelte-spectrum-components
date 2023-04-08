@@ -1,5 +1,8 @@
 <script lang="ts">
   import '@spectrum-css/textfield/dist/index-vars.css'
+  import Icon from './Icon.svelte'
+  import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
+  import Checkmark18 from 'svelte-spectrum-icons/workflow/Checkmark18.svelte'
 
   export let type: string = 'text'
   export let valid: boolean = false
@@ -17,21 +20,9 @@
   class:is-valid={valid}
 >
   {#if invalid}
-    <svg
-      class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon"
-      focusable="false"
-      aria-hidden="true"
-    >
-      <use xlink:href="#spectrum-icon-18-Alert" />
-    </svg>
+    <Icon icon={Alert18} class="spectrum-Textfield-validationIcon" />
   {:else if valid}
-    <svg
-      class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon"
-      focusable="false"
-      aria-hidden="true"
-    >
-      <use xlink:href="#spectrum-icon-18-Checkmark" />
-    </svg>
+    <Icon icon={Checkmark18} class="spectrum-Textfield-validationIcon" />
   {/if}
   <input class="spectrum-Textfield-input" {type} {...$$restProps} />
 </div>
