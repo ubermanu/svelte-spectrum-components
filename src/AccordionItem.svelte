@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Icon from './Icon.svelte'
+  import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+
   export let open: boolean = false
   export let disabled: boolean = false
   export let label: string = ''
@@ -28,13 +31,10 @@
       {disabled}
       on:click={toggle}>{label}</button
     >
-    <svg
-      class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
-      focusable="false"
-      aria-hidden="true"
-    >
-      <use xlink:href="#spectrum-css-icon-Chevron100" />
-    </svg>
+    <Icon
+      icon={ChevronRight100}
+      class="spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
+    />
   </h3>
 
   <div
