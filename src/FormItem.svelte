@@ -1,5 +1,6 @@
 <script lang="ts">
   import { v4 as uuid } from '@lukeed/uuid'
+  import FieldLabel from './FieldLabel.svelte'
 
   export let label: string = ''
 
@@ -9,11 +10,7 @@
 
 <div class="spectrum-Form-item">
   {#if label}
-    <label
-      for={id}
-      class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel"
-      >{label}</label
-    >
+    <FieldLabel for={id} class="spectrum-Form-itemLabel">{label}</FieldLabel>
   {/if}
   <div class="spectrum-Form-itemField">
     <slot {id} />
