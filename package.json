@@ -42,6 +42,7 @@
     "@spectrum-css/page": "^5.0.20",
     "@spectrum-css/picker": "^3.0.2",
     "@spectrum-css/popover": "^6.0.29",
+    "@spectrum-css/progressbar": "^3.0.17",
     "@spectrum-css/quickaction": "^3.0.38",
     "@spectrum-css/rating": "^3.0.37",
     "@spectrum-css/stepper": "^4.0.9",

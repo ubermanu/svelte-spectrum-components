@@ -91,6 +91,9 @@ dependencies:
   '@spectrum-css/popover':
     specifier: ^6.0.29
     version: 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/progressbar':
+    specifier: ^3.0.17
+    version: 3.0.17(@spectrum-css/fieldlabel@6.0.15)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/quickaction':
     specifier: ^3.0.38
     version: 3.0.38(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/vars@9.0.0)
@@ -919,6 +922,16 @@ packages:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
       '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/progressbar@3.0.17(@spectrum-css/fieldlabel@6.0.15)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-3nQi0MobxVyeujCvEpiGXAczF/NmmAgvXiYGsmOljL5Ewyf1WTobMgkGxjZ+vOSOBXqi0d2R8bMseR94Ba4tjA==}
+    peerDependencies:
+      '@spectrum-css/fieldlabel': ^6.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/fieldlabel': 6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
