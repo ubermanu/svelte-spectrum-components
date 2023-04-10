@@ -4,11 +4,11 @@
   export let placement: PopoverPlacement = 'top'
 
   const placementClass = `spectrum-Popover--${placement.replace(' ', '-')}`
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Popover {placementClass} {additionalClasses || ''}"
+  class="spectrum-Popover {placementClass} {additionalClasses}"
   class:is-open={open}
   class:spectrum-Popover--withTip={withTip}
   {...rest}

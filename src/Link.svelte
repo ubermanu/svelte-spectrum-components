@@ -4,11 +4,11 @@
   export let staticBlack: boolean = false
   export let quiet: boolean = false
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <a
-  class="spectrum-Link {additionalClasses || ''}"
+  class="spectrum-Link {additionalClasses}"
   class:spectrum-Link--secondary={variant === 'secondary'}
   class:spectrum-Link--staticWhite={staticWhite}
   class:spectrum-Link--staticBlack={staticBlack}

@@ -11,12 +11,11 @@
   export let size: TShirtSize = 'M'
 
   export let containerClass: string = ''
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Textfield spectrum-Textfield--size{size} {containerClass ||
-    ''}"
+  class="spectrum-Textfield spectrum-Textfield--size{size} {containerClass}"
   class:spectrum-Textfield--quiet={quiet}
   class:is-disabled={disabled}
   class:is-invalid={invalid}
@@ -28,7 +27,7 @@
     <Icon icon={Checkmark18} class="spectrum-Textfield-validationIcon" />
   {/if}
   <input
-    class="spectrum-Textfield-input {additionalClasses || ''}"
+    class="spectrum-Textfield-input {additionalClasses}"
     {type}
     {disabled}
     {...rest}

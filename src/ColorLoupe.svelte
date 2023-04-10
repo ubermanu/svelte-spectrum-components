@@ -2,13 +2,13 @@
   export let color: string = 'none'
   export let open: boolean = false
 
-  const { class: additionalClasses, style, ...rest } = $$restProps
+  const { class: additionalClasses = '', style = '', ...rest } = $$restProps
 </script>
 
 <svg
-  class="spectrum-ColorLoupe {additionalClasses || ''}"
+  class="spectrum-ColorLoupe {additionalClasses}"
   class:is-open={open}
-  style="--spectrum-picked-color: {color}; {style || ''}"
+  style="--spectrum-picked-color: {color}; {style}"
   {...rest}
 >
   <defs>

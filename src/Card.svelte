@@ -10,11 +10,11 @@
   export let description: string = ''
   export let coverPhoto: string = ''
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Card spectrum-Card--size{size} {additionalClasses || ''}"
+  class="spectrum-Card spectrum-Card--size{size} {additionalClasses}"
   class:spectrum-Card--quiet={quiet}
   tabindex="0"
   role="figure"

@@ -4,11 +4,11 @@
   export let staticBlack: boolean = false
   export let indeterminate: boolean = false
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-ProgressCircle {additionalClasses || ''}"
+  class="spectrum-ProgressCircle {additionalClasses}"
   class:spectrum-ProgressCircle--small={size === 'small'}
   class:spectrum-ProgressCircle--large={size === 'large'}
   class:spectrum-ProgressCircle--staticWhite={staticWhite}

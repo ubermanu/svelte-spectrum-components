@@ -5,12 +5,12 @@
   export let disabled: boolean = false
   export let open: boolean = false
 
-  const { class: additionalClasses, style, ...rest } = $$restProps
+  const { class: additionalClasses = '', style = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-ColorHandle {additionalClasses || ''}"
-  style="--spectrum-picked-color: {color}; {style || ''}"
+  class="spectrum-ColorHandle {additionalClasses}"
+  style="--spectrum-picked-color: {color}; {style}"
   {...rest}
 >
   <div class="spectrum-ColorHandle-color" />

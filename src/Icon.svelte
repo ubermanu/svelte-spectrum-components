@@ -5,12 +5,12 @@
 
   export let size: TShirtSize = 'M'
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <svelte:component
   this={icon}
-  class="spectrum-Icon spectrum-Icon--size{size} {additionalClasses || ''}"
+  class="spectrum-Icon spectrum-Icon--size{size} {additionalClasses}"
   focusable="false"
   aria-hidden="true"
   {...rest}
