@@ -88,6 +88,9 @@ dependencies:
   '@spectrum-css/picker':
     specifier: ^3.0.2
     version: 3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/pickerbutton':
+    specifier: ^3.0.2
+    version: 3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/popover':
     specifier: ^6.0.29
     version: 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)

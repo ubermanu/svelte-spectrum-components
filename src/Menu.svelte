@@ -37,10 +37,10 @@
     )
   }
 
-  /** Push context to child components. */
-  setContext('menu', { selectable, items, selectedItems, toggleItem })
-
   const dispatch = createEventDispatcher()
+
+  /** Push context to child components. */
+  setContext('menu', { selectable, items, selectedItems, toggleItem, dispatch })
 
   selectedItems.subscribe((ids) => {
     if (!selectable) {
@@ -52,7 +52,7 @@
   })
 </script>
 
-<ul class="spectrum-Menu" role="menu">
+<ul class="spectrum-Menu" role="menu" on:click>
   <slot />
 </ul>
 

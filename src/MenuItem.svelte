@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext, onMount } from 'svelte'
+  import { getContext, onDestroy, onMount } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import Icon from './Icon.svelte'
   import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
@@ -13,14 +13,23 @@
   export let disabled: boolean = false
   export let selected: boolean = false
 
-  const { selectable, items, selectedItems, toggleItem } = getContext('menu')
+  const { selectable, items, selectedItems, toggleItem, dispatch } =
+    getContext('menu')
 
   function handleClick(e) {
-    if (!disabled && selectable) {
+    if (disabled) {
       e.preventDefault()
+      return
+    }
+
+    if (selectable) {
       toggleItem(id)
+    } else {
+      dispatch('select', { items: $items.filter((item) => item.id === id) })
     }
   }
+
+  let sub
 
   onMount(() => {
     const itemData = {
@@ -35,9 +44,15 @@
       $selectedItems = [...$selectedItems, id]
     }
 
-    selectedItems.subscribe((items) => {
+    sub = selectedItems.subscribe((items) => {
       selected = items.includes(id)
     })
+  })
+
+  onDestroy(async () => {
+    $items = $items.filter((item) => item.id !== id)
+    $selectedItems = $selectedItems.filter((item) => item !== id)
+    if (sub) await sub.unsubscribe()
   })
 </script>
 
