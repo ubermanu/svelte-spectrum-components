@@ -11,7 +11,7 @@
     <br />
     <Picker placeholder="Select a country">
       <MenuItem value="US">United States</MenuItem>
-      <MenuItem value="CA">Canada</MenuItem>
+      <MenuItem value="CA" selected>Canada</MenuItem>
       <MenuItem value="MX">Mexico</MenuItem>
     </Picker>
   </Theme>
