@@ -35,6 +35,7 @@
     "@spectrum-css/fieldlabel": "^6.0.15",
     "@spectrum-css/helptext": "^4.0.14",
     "@spectrum-css/icon": "^3.0.36",
+    "@spectrum-css/inlinealert": "^7.0.3",
     "@spectrum-css/menu": "^4.0.17",
     "@spectrum-css/page": "^5.0.20",
     "@spectrum-css/picker": "^3.0.2",
