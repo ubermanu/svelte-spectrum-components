@@ -14,5 +14,11 @@
       <MenuItem value="CA" selected>Canada</MenuItem>
       <MenuItem value="MX">Mexico</MenuItem>
     </Picker>
+    <br />
+    <Picker placeholder="Select a country" multiple>
+      <MenuItem value="US">United States</MenuItem>
+      <MenuItem value="CA" selected>Canada</MenuItem>
+      <MenuItem value="MX">Mexico</MenuItem>
+    </Picker>
   </Theme>
 </Hst.Story>

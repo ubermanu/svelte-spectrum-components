@@ -52,7 +52,7 @@
   onDestroy(async () => {
     $items = $items.filter((item) => item.id !== id)
     $selectedItems = $selectedItems.filter((item) => item !== id)
-    if (sub) await sub.unsubscribe()
+    if (sub) await sub()
   })
 </script>
 
