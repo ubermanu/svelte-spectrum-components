@@ -1,9 +1,10 @@
 <script lang="ts">
   import ActionButton from './ActionButton.svelte'
   import Menu from './Menu.svelte'
+  import Popover from './Popover.svelte'
 
   export let label: string = ''
-
+  export let placement: PopoverPlacement = 'bottom'
   export let open: boolean = false
 
   function toggle() {
@@ -15,13 +16,12 @@
   {label}
 </ActionButton>
 <br />
-<div class="spectrum-Popover spectrum-Popover--bottom" class:is-open={open}>
+<Popover {open} {placement}>
   <Menu>
     <slot />
   </Menu>
-</div>
+</Popover>
 
 <style>
   @import '@spectrum-css/actionbutton/dist/index-vars.css';
-  @import '@spectrum-css/popover/dist/index-vars.css';
 </style>

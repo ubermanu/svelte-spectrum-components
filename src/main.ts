@@ -2,6 +2,19 @@ import './styles.css'
 
 declare global {
   type TShirtSize = 'S' | 'M' | 'L' | 'XL'
+  type PopoverPlacement =
+    | 'top'
+    | 'bottom'
+    | 'left'
+    | 'right'
+    | 'top left'
+    | 'top right'
+    | 'bottom left'
+    | 'bottom right'
+    | 'left top'
+    | 'left bottom'
+    | 'right top'
+    | 'right bottom'
 }
 
 export { default as Accordion } from './Accordion.svelte'
@@ -30,6 +43,8 @@ export { default as FormItem } from './FormItem.svelte'
 export { default as Icon } from './Icon.svelte'
 export { default as Menu } from './Menu.svelte'
 export { default as MenuItem } from './MenuItem.svelte'
+export { default as Picker } from './Picker.svelte'
+export { default as Popover } from './Popover.svelte'
 export { default as QuickActions } from './QuickActions.svelte'
 export { default as Rating } from './Rating.svelte'
 export { default as Stepper } from './Stepper.svelte'

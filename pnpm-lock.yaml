@@ -55,6 +55,9 @@ dependencies:
   '@spectrum-css/colorloupe':
     specifier: ^2.0.18
     version: 2.0.18(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/combobox':
+    specifier: ^1.0.6
+    version: 1.0.6(@spectrum-css/pickerbutton@3.0.2)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/divider':
     specifier: ^2.0.25
     version: 2.0.25(@spectrum-css/tokens@8.0.2)
@@ -70,6 +73,9 @@ dependencies:
   '@spectrum-css/page':
     specifier: ^5.0.20
     version: 5.0.20
+  '@spectrum-css/picker':
+    specifier: ^3.0.2
+    version: 3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/popover':
     specifier: ^6.0.29
     version: 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
@@ -744,6 +750,18 @@ packages:
       '@spectrum-css/vars': 9.0.0
     dev: false
 
+  /@spectrum-css/combobox@1.0.6(@spectrum-css/pickerbutton@3.0.2)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-TKdqT+o6MewZLa+jeN9/OJKeHp5wZjBrTTDV7wqFN9H7jFmS/1Efhca8LH2esUyfiG24IWg5wpcPve8BZxLGWw==}
+    peerDependencies:
+      '@spectrum-css/pickerbutton': ^2.0.0 || ^3.0.0
+      '@spectrum-css/popover': ^5.0.0 || ^6.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/pickerbutton': 3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
   /@spectrum-css/dialog@6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0):
     resolution: {integrity: sha512-66pqAHDe9aF+3CnFWXJfr5d27fZr17e58GFa0axRZq/5bExqN4nFxNdMSBh7myO2j3e9WJO5r1dldDhvJpkkFw==}
     peerDependencies:
@@ -815,6 +833,34 @@ packages:
   /@spectrum-css/page@5.0.20:
     resolution: {integrity: sha512-8xAtUY+iWeb1rgF4bNXt5UN1Cy4h55sgi0ldggmAgGWkjHUGKm0rGxatpgS4aN6c1SYCMRCtFHfupVJsR9Rung==}
     dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/picker@3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-KejmRzyDc1VILF/dSfMbmIVFcHeGxSU69r2p+aIbnzpPZYStxpwxM0wfwPruJtXR13ockQqO0ZUaBJYTqI/g3g==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/menu': ^4.0.0
+      '@spectrum-css/popover': ^5.0.0 || ^6.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/menu': 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/pickerbutton@3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-h/yoYtjKa/Wp4ZFRNboA3xZCcOoGO7Ml/pSXr8avR7rSsTLJlrbXiecNKv6udvF1nrBHzLpeMgmUdXdR0gsEvg==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/menu': ^4.0.0
+      '@spectrum-css/popover': ^5.0.0 || ^6.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/menu': 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/vars': 9.0.0
     dev: false
 
