@@ -8,6 +8,7 @@
   export let quiet: boolean = false
   export let loading: boolean = false
 
+  export let multiple: boolean = false
   export let disabled: boolean = false
   export let required: boolean = false
   export let invalid: boolean = false
@@ -24,10 +25,16 @@
 
   let selectedLabel: string = ''
 
+  /**
+   * Handle select event from menu, then close the popover
+   *
+   * @param {CustomEvent} event
+   */
   function handleSelect(event: CustomEvent) {
-    value = event.detail.value
-    selectedLabel = event.detail.label
-    // open = false
+    const { items } = event.detail
+    selectedLabel = items.map((item) => item.label).join(', ')
+    value = items.map((item) => item.value).join(', ')
+    open = false
   }
 </script>
 
@@ -40,7 +47,7 @@
   on:click={toggleOpen}
 >
   <span class="spectrum-Picker-label" class:is-placeholder={!value}>
-    {value || placeholder}
+    {selectedLabel || placeholder}
   </span>
   <Icon
     icon={ChevronRight100}
@@ -55,7 +62,7 @@
     class="spectrum-Picker-popover"
     style="width: {width}"
   >
-    <Menu on:select={handleSelect}>
+    <Menu selectable {multiple} on:select={handleSelect}>
       <slot />
     </Menu>
   </Popover>

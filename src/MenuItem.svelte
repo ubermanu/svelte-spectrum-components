@@ -11,37 +11,31 @@
   export let disabled: boolean = false
   export let selected: boolean = false
 
-  const { readonly, items, selectedItems } = getContext('menu')
+  const { selectable, items, selectedItems, toggleItem } = getContext('menu')
 
-  function toggle() {
-    if (!selected) {
-      selected = true
-      $selectedItems = [...$selectedItems, id]
-    } else {
-      selected = false
-      $selectedItems = [...$selectedItems.filter((item) => item !== id)]
+  function handleClick(e) {
+    if (!disabled && selectable) {
+      e.preventDefault()
+      toggleItem(id)
     }
   }
 
-  function handleClick(e) {
-    if (!disabled && !readonly) {
-      e.preventDefault()
-      toggle()
-    }
+  const itemData = {
+    id,
+    label,
+    value,
   }
 
   onMount(() => {
-    $items = [
-      ...$items,
-      {
-        id,
-        label,
-        value,
-      },
-    ]
+    $items = [...$items, itemData]
+
     if (selected) {
       $selectedItems = [...$selectedItems, id]
     }
+
+    selectedItems.subscribe((items) => {
+      selected = items.includes(id)
+    })
   })
 </script>
 

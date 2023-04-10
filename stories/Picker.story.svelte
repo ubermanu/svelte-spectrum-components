@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Picker, Theme } from '../src/main.ts'
-  import MenuItem from '../src/MenuItem.svelte'
+  import { Picker, MenuItem, Theme } from '../src/main.ts'
+
   export let Hst: Hst
 </script>
 
@@ -10,9 +10,9 @@
     <Picker placeholder="Select a country" />
     <br />
     <Picker placeholder="Select a country">
-      <MenuItem value="US">United States</MenuItem>
-      <MenuItem value="CA" selected>Canada</MenuItem>
-      <MenuItem value="MX">Mexico</MenuItem>
+      <MenuItem label="United States" value="US" />
+      <MenuItem label="Canada" value="CA" selected />
+      <MenuItem label="Mexico" value="MX" />
     </Picker>
   </Theme>
 </Hst.Story>
