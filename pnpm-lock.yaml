@@ -46,6 +46,15 @@ dependencies:
   '@spectrum-css/closebutton':
     specifier: ^3.0.26
     version: 3.0.26(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/colorarea':
+    specifier: ^3.0.7
+    version: 3.0.7(@spectrum-css/colorhandle@3.0.4)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/colorhandle':
+    specifier: ^3.0.4
+    version: 3.0.4(@spectrum-css/colorloupe@2.0.18)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/colorloupe':
+    specifier: ^2.0.18
+    version: 2.0.18(@spectrum-css/vars@9.0.0)
   '@spectrum-css/divider':
     specifier: ^2.0.25
     version: 2.0.25(@spectrum-css/tokens@8.0.2)
@@ -705,6 +714,34 @@ packages:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
       '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/colorarea@3.0.7(@spectrum-css/colorhandle@3.0.4)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-3Tv/VZfXPuIAef7GKXwZyBJ7TXd3KCFgUFVXgMPvQIDhbL35gyu3/jPp8mYNz+zNzWgGGuuFOseHSEvYrdqm7A==}
+    peerDependencies:
+      '@spectrum-css/colorhandle': '>=3.0.0'
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/colorhandle': 3.0.4(@spectrum-css/colorloupe@2.0.18)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/colorhandle@3.0.4(@spectrum-css/colorloupe@2.0.18)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-d7bWdevOB1xNoOfXo/sHJkWUwZ7sxoPqI5ERlYy7EnsgIVT4QdRcfyiimz1ai2MwWvXnVtrIuFes3wha6HF60Q==}
+    peerDependencies:
+      '@spectrum-css/colorloupe': ^2.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/colorloupe': 2.0.18(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/colorloupe@2.0.18(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-8Bnex/4wvZ7EPOW5JqjNVAc7GrvQcZgmmofmJdVly/bp4EcsVvT4bDmhlspuLBzKBn0vYTjB82o5o9fJx+5d5A==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
     dev: false
 
   /@spectrum-css/dialog@6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0):
