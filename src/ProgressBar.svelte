@@ -8,9 +8,15 @@
   export let max: number = 100
   export let sideLabel: boolean = false
   export let indeterminate: boolean = false
+  export let placement: 'top' | 'bottom' = 'top'
 
   // Calculate the width of the progress bar according to the value, min and max
   $: fillWidth = ((value - min) / (max - min)) * 100
+
+  // Force the placement to be top if sideLabel is true
+  $: if (sideLabel) {
+    placement = 'top'
+  }
 
   const { class: additionalClasses, ...rest } = $$restProps
 </script>
@@ -27,15 +33,17 @@
   aria-valuemax={max}
   {...rest}
 >
-  {#if label}
-    <FieldLabel {size} class="spectrum-ProgressBar-label">
-      {label}
-    </FieldLabel>
-  {/if}
-  {#if !indeterminate}
-    <FieldLabel {size} class="spectrum-ProgressBar-percentage">
-      {value}%
-    </FieldLabel>
+  {#if placement === 'top'}
+    {#if label}
+      <FieldLabel {size} class="spectrum-ProgressBar-label">
+        {label}
+      </FieldLabel>
+    {/if}
+    {#if !indeterminate}
+      <FieldLabel {size} class="spectrum-ProgressBar-percentage">
+        {value}%
+      </FieldLabel>
+    {/if}
   {/if}
   <div class="spectrum-ProgressBar-track">
     <div
@@ -43,8 +51,17 @@
       style:width={indeterminate ? undefined : `${fillWidth}%`}
     />
   </div>
-  {#if !indeterminate}
-    <div class="spectrum-ProgressBar-label" hidden />
+  {#if label && placement === 'bottom'}
+    {#if label}
+      <FieldLabel {size} class="spectrum-ProgressBar-label">
+        {label}
+      </FieldLabel>
+    {/if}
+    {#if !indeterminate}
+      <FieldLabel {size} class="spectrum-ProgressBar-percentage">
+        {value}%
+      </FieldLabel>
+    {/if}
   {/if}
 </div>
 

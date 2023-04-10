@@ -12,6 +12,9 @@
       <ProgressBar label="Loading" value="50" />
       <ProgressBar label="Loading" value="100" />
       <ProgressBar label="Loading" value="50" sideLabel />
+      <ProgressBar label="Loading" indeterminate />
+      <ProgressBar label="Loading" value="50" placement="bottom" />
+      <ProgressBar label="Loading" value="50" placement="bottom" sideLabel />
     </div>
   </Theme>
 </Hst.Story>
