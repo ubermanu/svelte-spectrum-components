@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/textfield/dist/index-vars.css'
   import Icon from './Icon.svelte'
   import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
   import Checkmark18 from 'svelte-spectrum-icons/workflow/Checkmark18.svelte'
@@ -26,3 +25,7 @@
   {/if}
   <input class="spectrum-Textfield-input" {type} {...$$restProps} />
 </div>
+
+<style>
+  @import '@spectrum-css/textfield/dist/index-vars.css';
+</style>

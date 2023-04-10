@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
-  import '@spectrum-css/actionbutton/dist/index-vars.css'
   import CornerTriangle75 from 'svelte-spectrum-icons/ui/CornerTriangle.svelte'
   import Icon from './Icon.svelte'
 
@@ -44,3 +43,7 @@
   {/if}
   <span class="spectrum-ActionButton-label"><slot /></span>
 </button>
+
+<style>
+  @import '@spectrum-css/actionbutton/dist/index-vars.css';
+</style>

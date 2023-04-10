@@ -1,7 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/button/dist/index-vars.css'
-  import '@spectrum-css/button/dist/index.css'
-
   export let variant: 'primary' | 'secondary' | 'accent' | 'negative' = 'accent'
 
   export let size: TShirtSize = 'M'
@@ -25,3 +22,7 @@
   <slot name="icon" />
   <span class="spectrum-Button-label"><slot /></span>
 </button>
+
+<style>
+  @import '@spectrum-css/button/dist/index-vars.css';
+</style>

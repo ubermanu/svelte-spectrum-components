@@ -46,3 +46,7 @@
     <slot />
   </div>
 </div>
+
+<style>
+  @import '@spectrum-css/accordion/dist/index-vars.css';
+</style>

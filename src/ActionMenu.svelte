@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/actionmenu/dist/index-vars.css'
-  import '@spectrum-css/popover/dist/index-vars.css'
   import ActionButton from './ActionButton.svelte'
   import Menu from './Menu.svelte'
 
@@ -22,3 +20,8 @@
     <slot />
   </Menu>
 </div>
+
+<style>
+  @import '@spectrum-css/actionbutton/dist/index-vars.css';
+  @import '@spectrum-css/popover/dist/index-vars.css';
+</style>

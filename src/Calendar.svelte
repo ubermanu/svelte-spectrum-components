@@ -1,13 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { writable } from 'svelte/store'
-  import '@spectrum-css/calendar/dist/index-vars.css'
   import { chunk } from './lib/array'
+  import { generateCalendarCells } from './lib/calendar'
 
   import ActionButton from './ActionButton.svelte'
   import Icon from './Icon.svelte'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightMedium.svelte'
-  import { generateCalendarCells } from './lib/calendar'
 
   const today = new Date()
 
@@ -137,3 +136,7 @@
     </table>
   </div>
 </div>
+
+<style>
+  @import '@spectrum-css/calendar/dist/index-vars.css';
+</style>

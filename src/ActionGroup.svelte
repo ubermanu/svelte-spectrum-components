@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/actiongroup/dist/index-vars.css'
-
   export let size: TShirtSize = 'M'
   export let orientation: 'horizontal' | 'vertical' = 'horizontal'
   export let compact: boolean = false
@@ -17,3 +15,7 @@
 >
   <slot />
 </div>
+
+<style>
+  @import '@spectrum-css/actiongroup/dist/index-vars.css';
+</style>

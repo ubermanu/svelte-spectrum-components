@@ -67,6 +67,6 @@
   {/if}
 </div>
 
-<style lang="postcss">
+<style>
   @import '@spectrum-css/card/dist/index-vars.css';
 </style>

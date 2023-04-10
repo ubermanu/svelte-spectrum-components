@@ -11,3 +11,7 @@
 >
   <span class="spectrum-Menu-itemLabel"><slot /></span>
 </li>
+
+<style>
+  @import '@spectrum-css/menu/dist/index-vars.css';
+</style>

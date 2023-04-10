@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/breadcrumb/dist/index-vars.css'
-
   export let compact: boolean = false
   export let multiline: boolean = false
 </script>
@@ -12,3 +10,7 @@
 >
   <slot />
 </ul>
+
+<style>
+  @import '@spectrum-css/breadcrumb/dist/index-vars.css';
+</style>

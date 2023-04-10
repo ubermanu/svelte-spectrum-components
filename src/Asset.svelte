@@ -6,6 +6,6 @@
   <img class="spectrum-Asset-image {additionalClasses || ''}" alt {...rest} />
 </div>
 
-<style lang="postcss">
+<style>
   @import '@spectrum-css/asset/dist/index-vars.css';
 </style>

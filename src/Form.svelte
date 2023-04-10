@@ -9,3 +9,7 @@
 >
   <slot />
 </form>
+
+<style>
+  @import '@spectrum-css/fieldlabel/dist/index-vars.css';
+</style>

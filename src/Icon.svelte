@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
-  import '@spectrum-css/icon/dist/index-vars.css'
 
   export let icon: SvelteComponent
 
@@ -16,3 +15,7 @@
   aria-hidden="true"
   {...rest}
 />
+
+<style>
+  @import '@spectrum-css/icon/dist/index-vars.css';
+</style>

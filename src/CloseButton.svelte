@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/closebutton/dist/index-vars.css'
   import Cross75 from 'svelte-spectrum-icons/ui/CrossMedium.svelte'
   import Icon from './Icon.svelte'
 
@@ -21,3 +20,7 @@
     class="spectrum-CloseButton-UIIcon spectrum-UIIcon-Cross75"
   />
 </button>
+
+<style>
+  @import '@spectrum-css/closebutton/dist/index-vars.css';
+</style>

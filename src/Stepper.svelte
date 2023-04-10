@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/stepper/dist/index-vars.css'
-
   import ActionButton from './ActionButton.svelte'
   import Icon from './Icon.svelte'
   import ChevronRightSmall from 'svelte-spectrum-icons/ui/ChevronRightSmallMobile.svelte'
@@ -67,3 +65,7 @@
     </ActionButton>
   </span>
 </div>
+
+<style>
+  @import '@spectrum-css/stepper/dist/index-vars.css';
+</style>

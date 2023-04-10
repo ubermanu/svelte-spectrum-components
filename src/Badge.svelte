@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
-  import '@spectrum-css/badge/dist/index-vars.css'
   import Icon from './Icon.svelte'
 
   export let variant:
@@ -41,3 +40,7 @@
     <slot />
   </div>
 </div>
+
+<style>
+  @import '@spectrum-css/badge/dist/index-vars.css';
+</style>

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/divider/dist/index-vars.css'
-
   export let size: TShirtSize = 'M'
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
@@ -19,6 +17,8 @@
 />
 
 <style>
+  @import '@spectrum-css/divider/dist/index-vars.css';
+
   .spectrum-Divider--vertical {
     align-self: stretch;
     height: auto;

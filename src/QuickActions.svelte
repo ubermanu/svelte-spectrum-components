@@ -14,6 +14,6 @@
   <slot />
 </div>
 
-<style lang="postcss">
+<style>
   @import '@spectrum-css/quickaction/dist/index-vars.css';
 </style>

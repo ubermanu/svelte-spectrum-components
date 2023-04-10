@@ -1,7 +1,5 @@
 <script lang="ts">
-  import '@spectrum-css/checkbox/dist/index-vars.css'
   import Icon from './Icon.svelte'
-
   import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
   import Dash100 from 'svelte-spectrum-icons/ui/DashSmall.svelte'
 
@@ -46,3 +44,7 @@
     {/if}
   </span>
 </label>
+
+<style>
+  @import '@spectrum-css/checkbox/dist/index-vars.css';
+</style>

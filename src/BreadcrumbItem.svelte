@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/breadcrumb/dist/index-vars.css'
   import Icon from './Icon.svelte'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
 
@@ -34,3 +33,7 @@
     />
   {/if}
 </li>
+
+<style>
+  @import '@spectrum-css/breadcrumb/dist/index-vars.css';
+</style>

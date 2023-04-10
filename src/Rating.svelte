@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/rating/dist/index-vars.css'
-
   import Icon from './Icon.svelte'
   import Star18 from 'svelte-spectrum-icons/workflow/Star18.svelte'
   import StarOutline18 from 'svelte-spectrum-icons/workflow/StarOutline18.svelte'
@@ -37,3 +35,7 @@
     </span>
   {/each}
 </div>
+
+<style>
+  @import '@spectrum-css/rating/dist/index-vars.css';
+</style>

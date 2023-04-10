@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '@spectrum-css/actionbar/dist/index-vars.css'
   import CloseButton from './CloseButton.svelte'
 
   export let open: boolean = false
@@ -20,3 +19,7 @@
     <slot />
   </div>
 </div>
+
+<style>
+  @import '@spectrum-css/actionbar/dist/index-vars.css';
+</style>
