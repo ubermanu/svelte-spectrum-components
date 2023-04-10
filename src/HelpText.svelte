@@ -23,3 +23,7 @@
     <slot />
   </div>
 </div>
+
+<style>
+  @import '@spectrum-css/helptext/dist/index-vars.css';
+</style>
