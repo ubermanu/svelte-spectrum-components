@@ -18,12 +18,11 @@
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
-  class="spectrum-ActionButton spectrum-ActionButton--size{size} {additionalClasses ||
-    ''}"
+  class="spectrum-ActionButton spectrum-ActionButton--size{size} {additionalClasses}"
   class:spectrum-ActionButton--quiet={quiet}
   class:spectrum-ActionButton--emphasized={emphasized}
   class:spectrum-ActionButton--staticWhite={staticWhite}

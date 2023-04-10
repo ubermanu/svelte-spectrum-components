@@ -58,6 +58,9 @@ dependencies:
   '@spectrum-css/combobox':
     specifier: ^1.0.6
     version: 1.0.6(@spectrum-css/pickerbutton@3.0.2)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/contextualhelp':
+    specifier: ^1.0.4
+    version: 1.0.4(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/divider':
     specifier: ^2.0.25
     version: 2.0.25(@spectrum-css/tokens@8.0.2)
@@ -779,6 +782,18 @@ packages:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
       '@spectrum-css/pickerbutton': 3.0.2(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/contextualhelp@1.0.4(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/popover@6.0.29)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-ljn8c8vggzDYfMRVNBNwPPGNez/dPiXRh1HSztNeYkUtooALTMy78S9IAU1n3h1uq0IlKu+gReR4bL7VlgXgIw==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^3.0.0
+      '@spectrum-css/popover': ^6.0.0
+      '@spectrum-css/tokens': '>= 7'
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/popover': 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/tokens': 8.0.2
     dev: false
