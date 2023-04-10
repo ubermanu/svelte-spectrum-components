@@ -7,6 +7,7 @@
   export let min: number = 0
   export let max: number = 100
   export let sideLabel: boolean = false
+  export let indeterminate: boolean = false
 
   // Calculate the width of the progress bar according to the value, min and max
   $: fillWidth = ((value - min) / (max - min)) * 100
@@ -18,6 +19,7 @@
   class="spectrum-ProgressBar spectrum-ProgressBar--size{size} {additionalClasses ||
     ''}"
   class:spectrum-ProgressBar--sideLabel={sideLabel}
+  class:spectrum-ProgressBar--indeterminate={indeterminate}
   {value}
   role="progressbar"
   aria-valuenow={value}
@@ -30,13 +32,20 @@
       {label}
     </FieldLabel>
   {/if}
-  <FieldLabel {size} class="spectrum-ProgressBar-percentage">
-    {value}%
-  </FieldLabel>
+  {#if !indeterminate}
+    <FieldLabel {size} class="spectrum-ProgressBar-percentage">
+      {value}%
+    </FieldLabel>
+  {/if}
   <div class="spectrum-ProgressBar-track">
-    <div class="spectrum-ProgressBar-fill" style="width: {fillWidth}%;" />
+    <div
+      class="spectrum-ProgressBar-fill"
+      style:width={indeterminate ? undefined : `${fillWidth}%`}
+    />
   </div>
-  <div class="spectrum-ProgressBar-label" hidden />
+  {#if !indeterminate}
+    <div class="spectrum-ProgressBar-label" hidden />
+  {/if}
 </div>
 
 <style>
