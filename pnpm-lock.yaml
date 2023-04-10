@@ -19,6 +19,9 @@ dependencies:
   '@spectrum-css/actionmenu':
     specifier: ^4.0.14
     version: 4.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/menu@4.0.17)(@spectrum-css/popover@6.0.29)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/asset':
+    specifier: ^3.0.33
+    version: 3.0.33(@spectrum-css/vars@9.0.0)
   '@spectrum-css/badge':
     specifier: ^3.0.14
     version: 3.0.14(@spectrum-css/tokens@8.0.2)
@@ -31,6 +34,9 @@ dependencies:
   '@spectrum-css/calendar':
     specifier: ^3.1.1
     version: 3.1.1(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/card':
+    specifier: ^5.0.14
+    version: 5.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/asset@3.0.33)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/icon@3.0.36)(@spectrum-css/quickaction@3.0.38)(@spectrum-css/typography@4.0.30)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/checkbox':
     specifier: ^6.0.14
     version: 6.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
@@ -55,6 +61,9 @@ dependencies:
   '@spectrum-css/popover':
     specifier: ^6.0.29
     version: 6.0.29(@spectrum-css/dialog@6.0.31)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/quickaction':
+    specifier: ^3.0.38
+    version: 3.0.38(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/rating':
     specifier: ^3.0.37
     version: 3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
@@ -599,6 +608,14 @@ packages:
       '@spectrum-css/vars': 9.0.0
     dev: false
 
+  /@spectrum-css/asset@3.0.33(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-ytlBnlZnG18vqlcG9Zlna9Nr5cbdQWmEp4zv29hsM9nAWmFoMsqUAX4AC/lNVrU/i4p9t1rm8XN44BI5enxY9g==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
   /@spectrum-css/badge@3.0.14(@spectrum-css/tokens@8.0.2):
     resolution: {integrity: sha512-S+WDT9domgUbJBXXTY/fSmC4jO7w9aCSkmYrAtdLD1LSe6rAG7IfNysimb93uON0Veo5Iu3NIBFGfw+koWzVyg==}
     peerDependencies:
@@ -646,6 +663,26 @@ packages:
     dependencies:
       '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/card@5.0.14(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/asset@3.0.33)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/icon@3.0.36)(@spectrum-css/quickaction@3.0.38)(@spectrum-css/typography@4.0.30)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-ctz0LPpl88gW0UDBzyYb0rqn1kNojb3H9Zbx8fjQzNpwDAOfR9Bqb6wAXGSwKWcWyOoEDRYgvS9h0sMoED1vAA==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^1.0.0 || ^2.0.0 || ^3.0.0
+      '@spectrum-css/asset': ^3.0.0
+      '@spectrum-css/checkbox': ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/quickaction': ^3.0.0
+      '@spectrum-css/typography': ^4.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/asset': 3.0.33(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/checkbox': 6.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/quickaction': 3.0.38(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/typography': 4.0.30(@spectrum-css/vars@9.0.0)
       '@spectrum-css/vars': 9.0.0
     dev: false
 
@@ -749,6 +786,18 @@ packages:
     dependencies:
       '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
       '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/quickaction@3.0.38(@spectrum-css/actionbutton@3.0.26)(@spectrum-css/checkbox@6.0.14)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-KYfJqBmDDEMK3zxXO0wfmX3O+MH5KMHeqMUwfjPWfibrpuWDy8NUWXJr1j+xnZETdbNp9tQrcovr9wra+vWvmQ==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': ^1.0.0 || ^2.0.0 || ^3.0.0
+      '@spectrum-css/checkbox': ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/actionbutton': 3.0.26(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/checkbox': 6.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/vars': 9.0.0
     dev: false
 
   /@spectrum-css/rating@3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0):
