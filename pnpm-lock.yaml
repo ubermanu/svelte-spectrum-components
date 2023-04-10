@@ -76,6 +76,9 @@ dependencies:
   '@spectrum-css/link':
     specifier: ^4.0.25
     version: 4.0.25(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/logicbutton':
+    specifier: ^1.2.22
+    version: 1.2.22(@spectrum-css/vars@9.0.0)
   '@spectrum-css/menu':
     specifier: ^4.0.17
     version: 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
@@ -845,6 +848,14 @@ packages:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
       '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/logicbutton@1.2.22(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-3HkqXlyKx8LqyS1bghB5rJd+t5dGfgVn06Nvxaj6bCgZGHFShGM6Sef7FYp507u9dvmdIIw/gTBwdSIt2dkuZA==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
     dev: false
 
   /@spectrum-css/menu@4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0):
