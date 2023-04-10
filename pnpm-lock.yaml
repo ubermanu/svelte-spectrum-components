@@ -64,6 +64,9 @@ dependencies:
   '@spectrum-css/fieldlabel':
     specifier: ^6.0.15
     version: 6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/helptext':
+    specifier: ^4.0.14
+    version: 4.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/icon':
     specifier: ^3.0.36
     version: 3.0.36(@spectrum-css/vars@9.0.0)
@@ -794,6 +797,16 @@ packages:
 
   /@spectrum-css/fieldlabel@6.0.15(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2):
     resolution: {integrity: sha512-EYhcQe556s09Iujboh0HA86kSECeSX5cFry+64cFuWGeJRVvNeVF1ua0MXl6v6+kMR52pDbDKUGtkHonAd3ovw==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/helptext@4.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-WZW1uHvwb9AO+cV88CWVObzVlU16swcB3v3LtNbI7qN+DB1d81BIzmZX5Y1IjsjY0KwPzWzqpVmWHLspA8bwzA==}
     peerDependencies:
       '@spectrum-css/icon': ^3.0.0
       '@spectrum-css/tokens': '>=8.0.0'
