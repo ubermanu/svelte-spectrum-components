@@ -1,17 +1,32 @@
 <script lang="ts">
+  import { onMount, getContext } from 'svelte'
+  import { v4 as uuid } from '@lukeed/uuid'
   import Icon from './Icon.svelte'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+
+  const id = uuid()
 
   export let open: boolean = false
   export let disabled: boolean = false
   export let label: string = ''
 
-  // TODO: Check if the parent accordion has allowMultiple = true
-  function toggle() {
-    if (disabled) {
-      return
+  const { openedItems, toggleItem } = getContext('accordion')
+
+  onMount(() => {
+    // If the item is open, add it to the list of opened items
+    if (open) {
+      $openedItems = [...$openedItems, id]
     }
-    open = !open
+
+    // Update the open state when the list of opened items changes
+    openedItems.subscribe((items) => {
+      open = items.includes(id)
+    })
+  })
+
+  function handleClick() {
+    if (disabled) return
+    toggleItem(id)
   }
 </script>
 
@@ -25,12 +40,14 @@
     <button
       class="spectrum-Accordion-itemHeader"
       type="button"
-      id="spectrum-accordion-item-0-header"
-      aria-controls="spectrum-accordion-item-0-content"
+      id="{id}-header"
+      aria-controls="{id}-content"
       aria-expanded={open}
       {disabled}
-      on:click={toggle}>{label}</button
+      on:click={handleClick}
     >
+      {label}
+    </button>
     <Icon
       icon={ChevronRight100}
       class="spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
@@ -40,8 +57,8 @@
   <div
     class="spectrum-Accordion-itemContent"
     role="region"
-    id="spectrum-accordion-item-0-content"
-    aria-labelledby="spectrum-accordion-item-0-header"
+    id="{id}-content"
+    aria-labelledby="{id}-header"
   >
     <slot />
   </div>
