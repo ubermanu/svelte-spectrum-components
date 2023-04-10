@@ -73,6 +73,9 @@ dependencies:
   '@spectrum-css/inlinealert':
     specifier: ^7.0.3
     version: 7.0.3(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/link':
+    specifier: ^4.0.25
+    version: 4.0.25(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/menu':
     specifier: ^4.0.17
     version: 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
@@ -833,6 +836,14 @@ packages:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
       '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
+    dev: false
+
+  /@spectrum-css/link@4.0.25(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-Lv5f+B5QuDpRw1JPFpvm5YG+CBoJ1ZTawDDatbNVBEYPlk9dnzZibMPpEb3XSQDXpLDQLk0yLjx1H/JV7IPbWg==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
