@@ -10,9 +10,9 @@
     <Picker placeholder="Select a country" />
     <br />
     <Picker placeholder="Select a country">
-      <MenuItem label="United States" value="US" />
-      <MenuItem label="Canada" value="CA" selected />
-      <MenuItem label="Mexico" value="MX" />
+      <MenuItem value="US">United States</MenuItem>
+      <MenuItem value="CA" selected>Canada</MenuItem>
+      <MenuItem value="MX">Mexico</MenuItem>
     </Picker>
   </Theme>
 </Hst.Story>

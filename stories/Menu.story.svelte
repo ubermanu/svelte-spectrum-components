@@ -13,26 +13,26 @@
   <Theme>
     <p>Default menu</p>
     <Menu>
-      <MenuItem label="Item 1" />
-      <MenuItem label="Item 2" />
-      <MenuItem label="Item 3" />
-      <MenuItem label="Item 4" />
+      <MenuItem>Item 1</MenuItem>
+      <MenuItem>Item 2</MenuItem>
+      <MenuItem>Item 3</MenuItem>
+      <MenuItem>Item 4</MenuItem>
     </Menu>
     <br />
     <p>Menu with selected items</p>
     <Menu selectable on:select={handleSelect}>
-      <MenuItem label="Item 1" />
-      <MenuItem label="Item 2" selected />
-      <MenuItem label="Item 3" disabled />
-      <MenuItem label="Item 4" />
+      <MenuItem>Item 1</MenuItem>
+      <MenuItem selected>Item 2</MenuItem>
+      <MenuItem disabled>Item 3</MenuItem>
+      <MenuItem>Item 4</MenuItem>
     </Menu>
     <br />
     <p>Menu with selected items (multiple)</p>
     <Menu selectable multiple on:select={handleSelect}>
-      <MenuItem label="Item 1" />
-      <MenuItem label="Item 2" selected />
-      <MenuItem label="Item 3" disabled />
-      <MenuItem label="Item 4" selected />
+      <MenuItem>Item 1</MenuItem>
+      <MenuItem selected>Item 2</MenuItem>
+      <MenuItem disabled>Item 3</MenuItem>
+      <MenuItem selected>Item 4</MenuItem>
     </Menu>
   </Theme>
 </Hst.Story>

@@ -6,7 +6,9 @@
 
   const id = uuid()
 
-  export let label: string = ''
+  /** Attach the label to get its inner text */
+  let label
+
   export let value: string = ''
   export let disabled: boolean = false
   export let selected: boolean = false
@@ -20,13 +22,13 @@
     }
   }
 
-  const itemData = {
-    id,
-    label,
-    value,
-  }
-
   onMount(() => {
+    const itemData = {
+      id,
+      label: label.innerHTML,
+      value,
+    }
+
     $items = [...$items, itemData]
 
     if (selected) {
@@ -48,7 +50,7 @@
   tabindex={disabled ? -1 : 0}
   on:click={handleClick}
 >
-  <span class="spectrum-Menu-itemLabel">{label}</span>
+  <span class="spectrum-Menu-itemLabel" bind:this={label}><slot /></span>
   {#if selected}
     <Icon
       icon={Checkmark100}
