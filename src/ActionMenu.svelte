@@ -10,6 +10,11 @@
   function toggle() {
     open = !open
   }
+
+  function handleSelect(event: CustomEvent) {
+    // open = false
+    console.log(event.detail)
+  }
 </script>
 
 <ActionButton on:click={toggle} {...$$restProps} selected={open}>
@@ -17,7 +22,7 @@
 </ActionButton>
 <br />
 <Popover {open} {placement}>
-  <Menu>
+  <Menu on:select={handleSelect}>
     <slot />
   </Menu>
 </Popover>

@@ -11,7 +11,6 @@
   export let disabled: boolean = false
   export let required: boolean = false
   export let invalid: boolean = false
-  export let label: string = ''
   export let value: string = ''
   export let placeholder: string = ''
 
@@ -21,6 +20,14 @@
 
   function toggleOpen() {
     open = !open
+  }
+
+  let selectedLabel: string = ''
+
+  function handleSelect(event: CustomEvent) {
+    value = event.detail.value
+    selectedLabel = event.detail.label
+    // open = false
   }
 </script>
 
@@ -48,7 +55,7 @@
     class="spectrum-Picker-popover"
     style="width: {width}"
   >
-    <Menu>
+    <Menu on:select={handleSelect}>
       <slot />
     </Menu>
   </Popover>
