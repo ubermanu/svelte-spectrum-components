@@ -31,8 +31,9 @@
   {#if icon}
     <Icon
       {icon}
-      class="spectrum-Badge-icon"
-      class:spectrum-Badge-icon--no-label={!$$slots.default}
+      class="spectrum-Badge-icon {!$$slots.default
+        ? 'spectrum-Badge-icon--noLabel'
+        : ''}"
     />
   {/if}
   <div class="spectrum-Badge-label">
