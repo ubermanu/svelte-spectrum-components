@@ -23,12 +23,11 @@
     icon = variantIconMap[variant] || undefined
   }
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-InLineAlert spectrum-InLineAlert--{variant} {additionalClasses ||
-    ''}"
+  class="spectrum-InLineAlert spectrum-InLineAlert--{variant} {additionalClasses}"
   {...rest}
 >
   <div class="spectrum-InLineAlert-header">

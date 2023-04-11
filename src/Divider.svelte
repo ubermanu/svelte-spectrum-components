@@ -4,12 +4,11 @@
   export let staticBlack: boolean = false
   export let vertical: boolean = false
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <hr
-  class="spectrum-Divider spectrum-Divider--size{size} {additionalClasses ||
-    ''}"
+  class="spectrum-Divider spectrum-Divider--size{size} {additionalClasses}"
   class:spectrum-Divider--staticWhite={staticWhite}
   class:spectrum-Divider--staticBlack={staticBlack}
   class:spectrum-Divider--vertical={vertical}

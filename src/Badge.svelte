@@ -20,20 +20,19 @@
     | 'block-end'
     | undefined = undefined
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const fixedClass = fixed ? `spectrum-Badge--fixed-${fixed}` : ''
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Badge spectrum-Badge--size{size} spectrum-Badge--{variant} {additionalClasses ||
-    ''} {fixed ? `spectrum-Badge--fixed-${fixed}` : ''}"
+  class="spectrum-Badge spectrum-Badge--size{size} spectrum-Badge--{variant} {additionalClasses} {fixedClass}"
   {...rest}
 >
   {#if icon}
     <Icon
       {icon}
-      class="spectrum-Badge-icon {!$$slots.default
-        ? 'spectrum-Badge-icon--no-label'
-        : ''}"
+      class="spectrum-Badge-icon"
+      class:spectrum-Badge-icon--no-label={!$$slots.default}
     />
   {/if}
   <div class="spectrum-Badge-label">

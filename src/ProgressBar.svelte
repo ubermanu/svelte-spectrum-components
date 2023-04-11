@@ -18,12 +18,11 @@
     placement = 'top'
   }
 
-  const { class: additionalClasses, ...rest } = $$restProps
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-ProgressBar spectrum-ProgressBar--size{size} {additionalClasses ||
-    ''}"
+  class="spectrum-ProgressBar spectrum-ProgressBar--size{size} {additionalClasses}"
   class:spectrum-ProgressBar--sideLabel={sideLabel}
   class:spectrum-ProgressBar--indeterminate={indeterminate}
   {value}
