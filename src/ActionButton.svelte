@@ -44,5 +44,5 @@
 </button>
 
 <style>
-  @import '@spectrum-css/actionbutton/dist/index-vars.css';
+  @import '@spectrum-css/actionbutton';
 </style>

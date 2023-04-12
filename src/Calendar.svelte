@@ -138,5 +138,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/calendar/dist/index-vars.css';
+  @import '@spectrum-css/calendar';
 </style>

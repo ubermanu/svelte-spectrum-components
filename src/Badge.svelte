@@ -42,5 +42,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/badge/dist/index-vars.css';
+  @import '@spectrum-css/badge';
 </style>

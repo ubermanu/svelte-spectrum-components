@@ -18,5 +18,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/fieldlabel/dist/index-vars.css';
+  @import '@spectrum-css/fieldlabel';
 </style>

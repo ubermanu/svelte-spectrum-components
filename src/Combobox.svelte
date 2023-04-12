@@ -37,5 +37,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/combobox/dist/index-vars.css';
+  @import '@spectrum-css/combobox';
 </style>

@@ -35,5 +35,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/textfield/dist/index-vars.css';
+  @import '@spectrum-css/textfield';
 </style>

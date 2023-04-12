@@ -16,7 +16,7 @@
 />
 
 <style>
-  @import '@spectrum-css/divider/dist/index-vars.css';
+  @import '@spectrum-css/divider';
 
   .spectrum-Divider--vertical {
     align-self: stretch;

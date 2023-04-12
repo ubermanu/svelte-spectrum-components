@@ -17,5 +17,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/actiongroup/dist/index-vars.css';
+  @import '@spectrum-css/actiongroup';
 </style>

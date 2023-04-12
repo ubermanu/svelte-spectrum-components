@@ -15,5 +15,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/quickaction/dist/index-vars.css';
+  @import '@spectrum-css/quickaction';
 </style>

@@ -35,5 +35,5 @@
 </li>
 
 <style>
-  @import '@spectrum-css/breadcrumb/dist/index-vars.css';
+  @import '@spectrum-css/breadcrumb';
 </style>

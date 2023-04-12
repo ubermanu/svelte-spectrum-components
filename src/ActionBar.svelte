@@ -21,5 +21,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/actionbar/dist/index-vars.css';
+  @import '@spectrum-css/actionbar';
 </style>

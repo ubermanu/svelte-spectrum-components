@@ -45,5 +45,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/inlinealert/dist/index-vars.css';
+  @import '@spectrum-css/inlinealert';
 </style>

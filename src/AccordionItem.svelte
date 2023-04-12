@@ -65,5 +65,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/accordion/dist/index-vars.css';
+  @import '@spectrum-css/accordion';
 </style>

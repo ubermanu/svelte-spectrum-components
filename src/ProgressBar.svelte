@@ -65,5 +65,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/progressbar/dist/index-vars.css';
+  @import '@spectrum-css/progressbar';
 </style>

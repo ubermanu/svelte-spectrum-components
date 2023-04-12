@@ -26,5 +26,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/helptext/dist/index-vars.css';
+  @import '@spectrum-css/helptext';
 </style>

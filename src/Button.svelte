@@ -23,5 +23,5 @@
 </button>
 
 <style>
-  @import '@spectrum-css/button/dist/index-vars.css';
+  @import '@spectrum-css/button';
 </style>

@@ -12,5 +12,5 @@
 </button>
 
 <style>
-  @import '@spectrum-css/logicbutton/dist/index-vars.css';
+  @import '@spectrum-css/logicbutton';
 </style>

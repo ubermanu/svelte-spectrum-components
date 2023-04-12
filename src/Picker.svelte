@@ -69,5 +69,5 @@
 {/if}
 
 <style>
-  @import '@spectrum-css/picker/dist/index-vars.css';
+  @import '@spectrum-css/picker';
 </style>

@@ -37,5 +37,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/rating/dist/index-vars.css';
+  @import '@spectrum-css/rating';
 </style>

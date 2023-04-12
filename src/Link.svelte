@@ -19,5 +19,5 @@
 </a>
 
 <style>
-  @import '@spectrum-css/link/dist/index-vars.css';
+  @import '@spectrum-css/link';
 </style>

@@ -38,5 +38,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/contextualhelp/dist/index-vars.css';
+  @import '@spectrum-css/contextualhelp';
 </style>

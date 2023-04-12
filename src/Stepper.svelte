@@ -67,5 +67,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/stepper/dist/index-vars.css';
+  @import '@spectrum-css/stepper';
 </style>

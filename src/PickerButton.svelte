@@ -44,5 +44,5 @@
 </button>
 
 <style>
-  @import '@spectrum-css/pickerbutton/dist/index-vars.css';
+  @import '@spectrum-css/pickerbutton';
 </style>

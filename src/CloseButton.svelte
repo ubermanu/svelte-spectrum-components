@@ -22,5 +22,5 @@
 </button>
 
 <style>
-  @import '@spectrum-css/closebutton/dist/index-vars.css';
+  @import '@spectrum-css/closebutton';
 </style>

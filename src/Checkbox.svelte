@@ -46,5 +46,5 @@
 </label>
 
 <style>
-  @import '@spectrum-css/checkbox/dist/index-vars.css';
+  @import '@spectrum-css/checkbox';
 </style>

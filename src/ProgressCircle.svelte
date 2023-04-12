@@ -32,5 +32,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/progresscircle/dist/index-vars.css';
+  @import '@spectrum-css/progresscircle';
 </style>

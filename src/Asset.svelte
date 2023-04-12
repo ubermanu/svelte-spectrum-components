@@ -7,5 +7,6 @@
 </div>
 
 <style>
-  @import '@spectrum-css/asset/dist/index-vars.css';
+  @import '@spectrum-css/asset/dist/vars.css';
+  @import '@spectrum-css/asset';
 </style>

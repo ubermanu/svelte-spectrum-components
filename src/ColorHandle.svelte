@@ -20,5 +20,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/colorhandle/dist/index-vars.css';
+  @import '@spectrum-css/colorhandle';
 </style>

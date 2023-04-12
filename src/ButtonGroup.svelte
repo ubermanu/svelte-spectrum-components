@@ -14,5 +14,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/buttongroup/dist/index-vars.css';
+  @import '@spectrum-css/buttongroup';
 </style>

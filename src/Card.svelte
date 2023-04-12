@@ -68,5 +68,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/card/dist/index-vars.css';
+  @import '@spectrum-css/card';
 </style>

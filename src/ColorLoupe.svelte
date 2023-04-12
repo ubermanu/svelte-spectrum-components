@@ -618,5 +618,5 @@
 </svg>
 
 <style>
-  @import '@spectrum-css/colorloupe/dist/index-vars.css';
+  @import '@spectrum-css/colorloupe';
 </style>

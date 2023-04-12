@@ -16,5 +16,5 @@
   @import '@spectrum-css/vars/dist/spectrum-darkest.css';
   @import '@spectrum-css/vars/dist/spectrum-light.css';
 
-  @import '@spectrum-css/typography/dist/index-vars.css';
+  @import '@spectrum-css/typography';
 </style>

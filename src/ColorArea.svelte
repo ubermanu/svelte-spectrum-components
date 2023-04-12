@@ -34,6 +34,6 @@
 </div>
 
 <style>
-  @import '@spectrum-css/colorarea/dist/index-vars.css';
+  @import '@spectrum-css/colorarea';
   @import '@spectrum-css/colorarea/dist/index.css';
 </style>

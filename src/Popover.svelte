@@ -17,5 +17,5 @@
 </div>
 
 <style>
-  @import '@spectrum-css/popover/dist/index-vars.css';
+  @import '@spectrum-css/popover';
 </style>
