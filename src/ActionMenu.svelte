@@ -21,7 +21,7 @@
   {label}
 </ActionButton>
 <br />
-<Popover {open} {placement}>
+<Popover bind:open {placement}>
   <Menu on:select={handleSelect}>
     <slot />
   </Menu>

@@ -57,10 +57,10 @@
 
 {#if $$slots.default}
   <Popover
-    {open}
+    bind:open
     {placement}
     class="spectrum-Picker-popover"
-    style="width: {width}"
+    style="width: {width}; z-index: 1000"
   >
     <Menu selectable {multiple} on:select={handleSelect}>
       <slot />

@@ -23,7 +23,7 @@
     class="spectrum-ContextualHelp-popover"
     role="presentation"
     {placement}
-    {open}
+    bind:open
   >
     <h2 class="spectrum-ContextualHelp-heading">{heading}</h2>
     <p class="spectrum-ContextualHelp-body">
