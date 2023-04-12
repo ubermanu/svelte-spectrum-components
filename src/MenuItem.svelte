@@ -16,24 +16,13 @@
   const { selectable, items, selectedItems, toggleItem, dispatch } =
     getContext('menu')
 
-  function handleClick(e) {
-    if (disabled) {
-      e.preventDefault()
-      return
-    }
-
-    if (selectable) {
-      toggleItem(id)
-    } else {
-      dispatch('select', { items: $items.filter((item) => item.id === id) })
-    }
-  }
-
+  let el
   let sub
 
   onMount(() => {
     const itemData = {
       id,
+      el,
       label: label.innerHTML,
       value,
     }
@@ -54,9 +43,65 @@
     $selectedItems = $selectedItems.filter((item) => item !== id)
     if (sub) await sub()
   })
+
+  /**
+   * Toggles the selected state of the item if the menu is selectable.
+   * Otherwise, dispatches a select event with the item as the payload.
+   *
+   * @param {MouseEvent} e
+   */
+  function handleClick(e: MouseEvent) {
+    if (disabled) {
+      e.preventDefault()
+      return
+    }
+
+    if (selectable) {
+      toggleItem(id)
+    } else {
+      dispatch('select', { items: $items.filter((item) => item.id === id) })
+    }
+  }
+
+  /**
+   * Handles keyboard navigation for the menu.
+   *
+   * @param {KeyboardEvent} e
+   */
+  function handleKeyDown(e: KeyboardEvent) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handleClick(e as MouseEvent)
+    }
+
+    if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      const index = $items.findIndex((item) => item.id === id)
+      const prevItem = $items[index - 1]
+      prevItem?.el?.focus()
+    }
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      const index = $items.findIndex((item) => item.id === id)
+      const nextItem = $items[index + 1]
+      nextItem?.el?.focus()
+    }
+
+    if (e.key === 'Home') {
+      e.preventDefault()
+      $items[0]?.el?.focus()
+    }
+
+    if (e.key === 'End') {
+      e.preventDefault()
+      $items[$items.length - 1]?.el?.focus()
+    }
+  }
 </script>
 
 <li
+  bind:this={el}
   class="spectrum-Menu-item"
   role="menuitem"
   class:is-disabled={disabled}
@@ -64,6 +109,7 @@
   aria-disabled={disabled || undefined}
   tabindex={disabled ? -1 : 0}
   on:click={handleClick}
+  on:keydown={handleKeyDown}
 >
   <span class="spectrum-Menu-itemLabel" bind:this={label}><slot /></span>
   {#if selected}
