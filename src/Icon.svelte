@@ -17,5 +17,6 @@
 />
 
 <style>
+  @import '@spectrum-css/icon/dist/vars.css';
   @import '@spectrum-css/icon/dist/index-vars.css';
 </style>
