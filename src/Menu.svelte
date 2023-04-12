@@ -50,6 +50,13 @@
       items: $items.filter((item) => ids.includes(item.id)),
     })
   })
+
+  /** Focuses the first item in the menu. */
+  export const focusFirstItem = () => {
+    $items[0]?.el?.focus()
+  }
+
+  export { items, selectedItems }
 </script>
 
 <ul class="spectrum-Menu" role="menu" on:click>

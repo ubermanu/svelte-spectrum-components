@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { tick } from 'svelte'
   import Icon from './Icon.svelte'
   import Popover from './Popover.svelte'
   import Menu from './Menu.svelte'
@@ -19,10 +20,58 @@
   export let placement: PopoverPlacement = 'bottom'
   export let width: string = '240px'
 
-  function toggleOpen() {
-    open = !open
+  let menu: Menu, button: HTMLButtonElement
+
+  function openMenu() {
+    open = true
   }
 
+  /** Close the menu and focus the button */
+  function closeMenu() {
+    open = false
+    button.focus()
+  }
+
+  function toggleMenu() {
+    if (open) {
+      closeMenu()
+    } else {
+      openMenu()
+    }
+  }
+
+  /** Handle click event from button, then toggle the menu */
+  function handleClick() {
+    toggleMenu()
+  }
+
+  /**
+   * Handle keydown event from button, then toggle the popover or close the
+   * popover when escape key is pressed
+   *
+   * @param {KeyboardEvent} event
+   */
+  async function handleKeydown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      toggleMenu()
+      await tick()
+      menu.focusFirstItem()
+    }
+
+    if (event.key === 'Escape') {
+      closeMenu()
+    }
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      openMenu()
+      await tick()
+      menu.focusFirstItem()
+    }
+  }
+
+  /** Selected label, used to display the selected item(s) in the button */
   let selectedLabel: string = ''
 
   /**
@@ -34,19 +83,25 @@
     const { items } = event.detail
     selectedLabel = items.map((item) => item.label).join(', ')
     value = items.map((item) => item.value).join(', ')
-    open = false
+    closeMenu()
   }
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
-  class="spectrum-Picker spectrum-Picker--size{size}"
+  bind:this={button}
+  type="button"
+  class="spectrum-Picker spectrum-Picker--size{size} {additionalClasses}"
   class:spectrum-Picker--quiet={quiet}
   class:is-open={open}
   class:is-disabled={disabled}
   {disabled}
   aria-haspopup="listbox"
   style:width
-  on:click={toggleOpen}
+  on:click={handleClick}
+  on:keydown={handleKeydown}
+  {...rest}
 >
   <span class="spectrum-Picker-label" class:is-placeholder={!value}>
     {selectedLabel || placeholder}
@@ -64,7 +119,7 @@
     class="spectrum-Picker-popover"
     style="width: {width}; z-index: 1000"
   >
-    <Menu selectable {multiple} on:select={handleSelect}>
+    <Menu selectable {multiple} on:select={handleSelect} bind:this={menu}>
       <slot />
     </Menu>
   </Popover>
