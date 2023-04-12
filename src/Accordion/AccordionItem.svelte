@@ -28,13 +28,16 @@
     if (disabled) return
     toggleItem(id)
   }
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Accordion-item"
+  class="spectrum-Accordion-item {additionalClasses}"
   class:is-open={open}
   class:is-disabled={disabled}
   role="presentation"
+  {...rest}
 >
   <h3 class="spectrum-Accordion-itemHeading">
     <button
@@ -45,6 +48,10 @@
       aria-expanded={open}
       {disabled}
       on:click={handleClick}
+      on:click
+      on:keydown
+      on:keyup
+      on:keypress
     >
       {label}
     </button>

@@ -17,8 +17,15 @@
   }
 
   setContext('accordion', { openedItems, toggleItem })
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
-<div class="spectrum-Accordion" role="region">
+<div
+  class="spectrum-Accordion {additionalClasses}"
+  role="region"
+  data-testid="accordion"
+  {...rest}
+>
   <slot />
 </div>
