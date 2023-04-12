@@ -7,7 +7,7 @@
 
 <Hst.Story>
   <Theme>
-    <Picker placeholder="Select a country" />
+    <Picker placeholder="Select a country (disabled)" disabled />
     <br />
     <Picker placeholder="Select a country">
       <MenuItem value="US">United States</MenuItem>

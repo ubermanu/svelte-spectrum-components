@@ -42,6 +42,8 @@
   class="spectrum-Picker spectrum-Picker--size{size}"
   class:spectrum-Picker--quiet={quiet}
   class:is-open={open}
+  class:is-disabled={disabled}
+  {disabled}
   aria-haspopup="listbox"
   style:width
   on:click={toggleOpen}
