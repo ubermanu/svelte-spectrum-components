@@ -8,7 +8,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
-    "story:preview": "histoire preview"
+    "story:preview": "histoire preview",
+    "test": "vitest"
   },
   "prettier": "@ubermanu/prettier-config",
   "dependencies": {
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@histoire/plugin-svelte": "^0.15.9",
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@testing-library/svelte": "^3.2.2",
     "@tsconfig/svelte": "^3.0.0",
     "@ubermanu/prettier-config": "^1.7.1",
     "histoire": "^0.15.9",
@@ -67,6 +69,8 @@
     "svelte-check": "^2.10.3",
     "tslib": "^2.5.0",
     "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vite-plugin-sveld": "^1.1.0",
+    "vitest": "^0.30.1"
   }
 }

@@ -1,12 +1,20 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { defineConfig } from 'vite'
+import type { UserConfig } from 'vite'
+import sveld from 'vite-plugin-sveld'
+import type { UserConfig as TestConfig } from 'vitest'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: 'src/main.ts',
-    },
+// Import package.json version
+import { readFileSync } from 'fs'
+const json = readFileSync('package.json', 'utf8')
+const pkg = JSON.parse(json)
+
+export default {
+  plugins: [svelte(), sveld()],
+  define: {
+    __PACKAGE__: pkg,
   },
-  plugins: [svelte()],
-})
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
+} as UserConfig & TestConfig
