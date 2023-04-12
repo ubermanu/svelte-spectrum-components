@@ -1,0 +1,16 @@
+<script lang="ts">
+  import type { Hst } from '@histoire/plugin-svelte'
+  import { Icon, Theme } from '..'
+
+  import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
+  import Checkmark18 from 'svelte-spectrum-icons/workflow/Checkmark18.svelte'
+
+  export let Hst: Hst
+</script>
+
+<Hst.Story>
+  <Theme>
+    <Icon icon={Alert18} />
+    <Icon icon={Checkmark18} size="L" />
+  </Theme>
+</Hst.Story>

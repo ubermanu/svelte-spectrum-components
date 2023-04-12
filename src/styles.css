@@ -1,3 +1,52 @@
 @import '@spectrum-css/vars/dist/spectrum-global.css';
 
 @import '@spectrum-css/tokens/dist/index.css';
+
+/* Size */
+@import '@spectrum-css/vars/dist/spectrum-large.css';
+@import '@spectrum-css/vars/dist/spectrum-medium.css';
+
+/* Theme */
+@import '@spectrum-css/vars/dist/spectrum-dark.css';
+@import '@spectrum-css/vars/dist/spectrum-darkest.css';
+@import '@spectrum-css/vars/dist/spectrum-light.css';
+
+/* Components */
+@import '@spectrum-css/accordion';
+@import '@spectrum-css/actionbar';
+@import '@spectrum-css/actionbutton';
+@import '@spectrum-css/actiongroup';
+/*@import '@spectrum-css/actionmenu';*/
+@import '@spectrum-css/asset/dist/vars.css';
+@import '@spectrum-css/asset';
+@import '@spectrum-css/badge';
+@import '@spectrum-css/breadcrumb';
+@import '@spectrum-css/button';
+@import '@spectrum-css/buttongroup';
+@import '@spectrum-css/calendar';
+@import '@spectrum-css/card';
+@import '@spectrum-css/checkbox';
+@import '@spectrum-css/closebutton';
+@import '@spectrum-css/colorarea';
+@import '@spectrum-css/colorhandle';
+@import '@spectrum-css/colorloupe';
+@import '@spectrum-css/combobox';
+@import '@spectrum-css/contextualhelp';
+@import '@spectrum-css/divider';
+@import '@spectrum-css/fieldlabel';
+@import '@spectrum-css/helptext';
+@import '@spectrum-css/icon/dist/vars.css';
+@import '@spectrum-css/icon';
+@import '@spectrum-css/inlinealert';
+@import '@spectrum-css/link';
+@import '@spectrum-css/logicbutton';
+@import '@spectrum-css/menu';
+@import '@spectrum-css/picker';
+@import '@spectrum-css/popover';
+@import '@spectrum-css/progressbar';
+@import '@spectrum-css/progresscircle';
+@import '@spectrum-css/quickaction';
+@import '@spectrum-css/rating';
+@import '@spectrum-css/stepper';
+@import '@spectrum-css/textfield';
+@import '@spectrum-css/typography';
