@@ -2,7 +2,7 @@
   "name": "svelte-spectrum-components",
   "version": "0.1.0",
   "type": "module",
-  "module": "src/main.ts",
+  "module": "src/index.ts",
   "scripts": {
     "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
