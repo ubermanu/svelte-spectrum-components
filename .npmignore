@@ -1,0 +1,3 @@
+dist/assets/*
+dist/components/*/*.story.*
+dist/components/*/*.test.*
