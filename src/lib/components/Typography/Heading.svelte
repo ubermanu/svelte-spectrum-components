@@ -15,7 +15,7 @@
     6: 'XXS',
   }
 
-  $: if (!size) {
+  if (!size) {
     size = sizeMap[level] ?? 'M'
   }
 
