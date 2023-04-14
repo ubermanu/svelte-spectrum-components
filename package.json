@@ -25,6 +25,9 @@
     "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
     "preview": "vite preview",
+    "story:build": "histoire build",
+    "story:dev": "histoire dev",
+    "story:preview": "histoire preview",
     "test": "playwright test",
     "test:unit": "vitest"
   },
