@@ -25,6 +25,7 @@
     class="spectrum-Checkbox-input"
     disabled={disabled || readonly}
     {...$$restProps}
+    on:change
   />
   <span class="spectrum-Checkbox-box">
     <Icon

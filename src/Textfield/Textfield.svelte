@@ -31,5 +31,7 @@
     {type}
     {disabled}
     {...rest}
+    on:change
+    on:input
   />
 </div>
