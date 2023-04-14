@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-
   import { Card } from '$lib'
   import exampleAva from '$lib/assets/example-ava.jpg'
 

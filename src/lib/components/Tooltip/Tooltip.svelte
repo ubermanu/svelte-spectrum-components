@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
   import { Icon } from '$lib'
+  import type { PopoverPlacement } from '$lib/spectrum/types'
 
   export let open: boolean = false
   export let content: string = ''

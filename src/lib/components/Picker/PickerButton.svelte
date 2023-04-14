@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
   import { Icon } from '$lib'
+  import type { TShirtSize } from '$lib/spectrum/types'
   import ChevronDown100 from 'svelte-spectrum-icons/ui/ChevronRightSmallMobile.svelte'
 
   export let size: TShirtSize = 'M'

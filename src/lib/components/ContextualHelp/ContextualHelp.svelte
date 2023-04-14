@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ActionButton, Popover } from '$lib'
+  import type { PopoverPlacement } from '$lib/spectrum/types'
   import Info18 from 'svelte-spectrum-icons/workflow/Info18.svelte'
 
   export let heading: string = ''

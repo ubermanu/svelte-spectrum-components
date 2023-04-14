@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
+  import type { TShirtSize } from '$lib/spectrum/types'
 
   export let icon: SvelteComponent
 

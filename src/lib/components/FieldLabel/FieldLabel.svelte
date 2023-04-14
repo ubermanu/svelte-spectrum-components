@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { TShirtSize } from '$lib/spectrum/types'
+
   export let size: TShirtSize = 'M'
 
   const { class: additionalClasses = '', ...rest } = $$restProps

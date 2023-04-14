@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Asset, QuickActions } from '$lib'
+  import type { TShirtSize } from '$lib/spectrum/types'
 
   export let size: TShirtSize = 'M'
   export let quiet: boolean = false

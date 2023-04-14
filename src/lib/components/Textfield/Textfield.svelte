@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte'
   import { Icon } from '$lib'
+  import type { TShirtSize } from '$lib/spectrum/types'
   import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
   import Checkmark18 from 'svelte-spectrum-icons/workflow/Checkmark18.svelte'
 

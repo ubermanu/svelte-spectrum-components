@@ -1,6 +1,7 @@
 <script lang="ts">
   import { tick } from 'svelte'
   import { Icon, Popover, Menu } from '$lib'
+  import type { TShirtSize, PopoverPlacement } from '$lib/spectrum/types'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
 
   export let size: TShirtSize = 'M'
