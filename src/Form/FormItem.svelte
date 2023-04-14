@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { setContext } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import { FieldLabel } from '..'
 
@@ -6,6 +7,8 @@
 
   // TODO: Find a way to set the id on the slot element (onMount?)
   export let id: string = uuid()
+
+  setContext('formItem', { id })
 </script>
 
 <div class="spectrum-Form-item">
@@ -13,6 +16,6 @@
     <FieldLabel for={id} class="spectrum-Form-itemLabel">{label}</FieldLabel>
   {/if}
   <div class="spectrum-Form-itemField">
-    <slot {id} />
+    <slot />
   </div>
 </div>
