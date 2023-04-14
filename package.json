@@ -14,6 +14,7 @@
   "prettier": "@ubermanu/prettier-config",
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
+    "@popperjs/core": "^2.11.7",
     "@spectrum-css/accordion": "^3.0.37",
     "@spectrum-css/actionbar": "^6.0.15",
     "@spectrum-css/actionbutton": "^3.0.26",
@@ -52,6 +53,7 @@
     "@spectrum-css/stepper": "^4.0.9",
     "@spectrum-css/textfield": "^4.1.5",
     "@spectrum-css/tokens": "^8.0.2",
+    "@spectrum-css/tooltip": "^5.0.14",
     "@spectrum-css/typography": "^4.0.30",
     "@spectrum-css/vars": "^9.0.0",
     "svelte-spectrum-icons": "^2.1.0"

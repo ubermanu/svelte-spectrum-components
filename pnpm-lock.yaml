@@ -4,6 +4,9 @@ dependencies:
   '@lukeed/uuid':
     specifier: ^2.0.1
     version: 2.0.1
+  '@popperjs/core':
+    specifier: ^2.11.7
+    version: 2.11.7
   '@spectrum-css/accordion':
     specifier: ^3.0.37
     version: 3.0.37(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
@@ -118,6 +121,9 @@ dependencies:
   '@spectrum-css/tokens':
     specifier: ^8.0.2
     version: 8.0.2
+  '@spectrum-css/tooltip':
+    specifier: ^5.0.14
+    version: 5.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/typography':
     specifier: ^4.0.30
     version: 4.0.30(@spectrum-css/vars@9.0.0)
@@ -621,6 +627,10 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@popperjs/core@2.11.7:
+    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
+    dev: false
+
   /@rollup/plugin-node-resolve@13.3.0(rollup@2.79.1):
     resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
     engines: {node: '>= 10.0.0'}
@@ -1082,6 +1092,16 @@ packages:
 
   /@spectrum-css/tokens@8.0.2:
     resolution: {integrity: sha512-sncY3HFH8cePzTugliB/HVjoy1akpoTiDT8+gdGmlfkGP/U1cnwsYj8sLT5XHjRIojv9XIqvsz4pzkIj+z7DKg==}
+    dev: false
+
+  /@spectrum-css/tooltip@5.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-wEYTS2wu/HzHYRULawsmNN1pDT+uYLx8j2cARW106M+lCdbTa0azdexkm7fwaNXKM9EU2yILcU5ZelITfOEWGQ==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/tokens': 8.0.2
     dev: false
 
   /@spectrum-css/typography@4.0.30(@spectrum-css/vars@9.0.0):
