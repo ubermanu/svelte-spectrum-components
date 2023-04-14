@@ -13,6 +13,7 @@
 
 <div class="spectrum-ContextualHelp">
   <ActionButton
+    type="button"
     class="spectrum-ContextualHelp-button"
     size="XS"
     icon={Info18}
@@ -30,8 +31,4 @@
     </p>
     <slot name="after" />
   </Popover>
-  <div
-    class="dummy-spacing"
-    style="position: relative; height: 248px; min-width: 400px; max-width: 50%;"
-  />
 </div>
