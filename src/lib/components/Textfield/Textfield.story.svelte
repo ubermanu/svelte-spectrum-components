@@ -5,19 +5,17 @@
   export let Hst: Hst
 
   let placeholder = 'Placeholder'
-  let invalid = false
-  let valid = false
 </script>
 
-<Hst.Story>
+<Hst.Story layout={{ type: 'grid', width: 400 }}>
   <Hst.Variant title="Default">
     <Theme>
-      <Textfield {placeholder} {invalid} {valid} />
+      <div class="list">
+        <Textfield {placeholder} />
+        <Textfield {placeholder} invalid />
+        <Textfield {placeholder} valid />
+      </div>
     </Theme>
-    <svelte:fragment slot="controls">
-      <Hst.Checkbox title="Invalid" bind:value={invalid} />
-      <Hst.Checkbox title="Valid" bind:value={valid} />
-    </svelte:fragment>
   </Hst.Variant>
   <Hst.Variant title="Sizes">
     <Theme>

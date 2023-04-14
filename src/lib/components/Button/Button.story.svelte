@@ -5,7 +5,7 @@
   export let Hst: Hst
 </script>
 
-<Hst.Story>
+<Hst.Story layout={{ type: 'grid', width: 400 }}>
   <Hst.Variant title="Sizes">
     <Theme>
       <Button size="S">Button</Button>
