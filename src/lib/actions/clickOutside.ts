@@ -26,24 +26,25 @@ export const clickOutside: Action = (
     }
   }
 
-  function set_handler(enabled: boolean) {
+  function toggleHandler(enabled: boolean) {
     // A timeout is needed to prevent the click event from bubbling up to the
     // document and triggering the handler.
-    // setTimeout(() => {
-    //   ;(enabled ? document.addEventListener : document.removeEventListener)(
-    //     'click',
-    //     handler
-    //   )
-    // })
+    setTimeout(() => {
+      ;(enabled ? document.addEventListener : document.removeEventListener)(
+        'click',
+        handler
+      )
+    })
   }
-  set_handler(config.enabled)
+
+  toggleHandler(config.enabled)
 
   return {
     update(params) {
-      set_handler((config = params).enabled)
+      toggleHandler((config = params).enabled)
     },
     destroy() {
-      set_handler(false)
+      toggleHandler(false)
     },
   }
 }
