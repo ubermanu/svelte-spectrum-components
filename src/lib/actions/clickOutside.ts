@@ -29,12 +29,12 @@ export const clickOutside: Action = (
   function set_handler(enabled: boolean) {
     // A timeout is needed to prevent the click event from bubbling up to the
     // document and triggering the handler.
-    setTimeout(() => {
-      ;(enabled ? document.addEventListener : document.removeEventListener)(
-        'click',
-        handler
-      )
-    })
+    // setTimeout(() => {
+    //   ;(enabled ? document.addEventListener : document.removeEventListener)(
+    //     'click',
+    //     handler
+    //   )
+    // })
   }
   set_handler(config.enabled)
 

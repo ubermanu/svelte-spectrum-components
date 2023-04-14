@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { clickOutside } from '../actions/clickOutside'
+  import { clickOutside } from '$lib/actions/clickOutside'
 
   export let open: boolean = false
   export let withTip: boolean = false

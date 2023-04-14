@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { writable } from 'svelte/store'
-  import { chunk } from '../lib/array'
-  import { generateCalendarCells } from '../lib/calendar'
+  import { chunk } from '$lib/utils/array'
+  import { generateCalendarCells } from '$lib/utils/calendar'
 
   import { ActionButton, Icon } from '$lib'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightMedium.svelte'
