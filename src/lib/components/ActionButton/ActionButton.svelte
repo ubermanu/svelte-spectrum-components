@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { getContext } from 'svelte'
   import type { SvelteComponent } from 'svelte'
   import CornerTriangle75 from 'svelte-spectrum-icons/ui/CornerTriangle.svelte'
   import { Icon } from '$lib'
+  import type { TShirtSize } from '$lib/spectrum/types'
 
   export let icon: SvelteComponent | undefined = undefined
 
@@ -18,6 +20,14 @@
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
 
+  const actionGroup = getContext('actionGroup')
+
+  // Set quiet and size to match the action group if it exists
+  $: if (actionGroup) {
+    quiet = actionGroup.quiet
+    size = actionGroup.size
+  }
+
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
@@ -28,6 +38,7 @@
   class:spectrum-ActionButton--staticWhite={staticWhite}
   class:spectrum-ActionButton--staticBlack={staticBlack}
   class:is-selected={selected}
+  class:spectrum-ActionGroup-item={actionGroup}
   {...rest}
   on:click
 >

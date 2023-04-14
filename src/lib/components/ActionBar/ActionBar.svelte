@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { CloseButton } from '$lib'
+  import { CloseButton, Popover } from '$lib'
+  import { setContext } from 'svelte'
 
   export let open: boolean = false
   export let emphasized: boolean = false
@@ -7,15 +8,18 @@
   function close() {
     open = false
   }
+
+  setContext('actionBar', { emphasized, close })
 </script>
 
 <div
   class="spectrum-ActionBar"
   class:spectrum-ActionBar--emphasized={emphasized}
   class:is-open={open}
+  {...$$restProps}
 >
-  <div class="spectrum-Popover spectrum-ActionBar-popover" class:is-open={open}>
+  <Popover class="spectrum-ActionBar-popover" bind:open fixed>
     <CloseButton on:click={close} staticWhite={emphasized} />
     <slot />
-  </div>
+  </Popover>
 </div>

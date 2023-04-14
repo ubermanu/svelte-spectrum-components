@@ -14,52 +14,25 @@
     <ActionBar open={true}>
       <FieldLabel size="S">2 Selected</FieldLabel>
       <ActionGroup>
-        <ActionButton quiet class="spectrum-ActionGroup-item">
-          Edit
-        </ActionButton>
-        <ActionButton quiet class="spectrum-ActionGroup-item">
-          Copy
-        </ActionButton>
-        <ActionButton quiet class="spectrum-ActionGroup-item">
-          Delete
-        </ActionButton>
+        <ActionButton>Edit</ActionButton>
+        <ActionButton>Copy</ActionButton>
+        <ActionButton>Delete</ActionButton>
       </ActionGroup>
     </ActionBar>
     <ActionBar open={true}>
       <FieldLabel size="S">2 Selected</FieldLabel>
       <ActionGroup>
-        <ActionButton quiet icon={Edit18} class="spectrum-ActionGroup-item">
-          Edit
-        </ActionButton>
-        <ActionButton quiet icon={Copy18} class="spectrum-ActionGroup-item">
-          Copy
-        </ActionButton>
-        <ActionButton quiet icon={Delete18} class="spectrum-ActionGroup-item">
-          Delete
-        </ActionButton>
+        <ActionButton icon={Edit18}>Edit</ActionButton>
+        <ActionButton icon={Copy18}>Copy</ActionButton>
+        <ActionButton icon={Delete18}>Delete</ActionButton>
       </ActionGroup>
     </ActionBar>
     <ActionBar open={true} emphasized>
       <FieldLabel size="S" staticWhite>2 Selected</FieldLabel>
       <ActionGroup>
-        <ActionButton
-          quiet
-          icon={Edit18}
-          staticWhite
-          class="spectrum-ActionGroup-item"
-        />
-        <ActionButton
-          quiet
-          icon={Copy18}
-          staticWhite
-          class="spectrum-ActionGroup-item"
-        />
-        <ActionButton
-          quiet
-          icon={Delete18}
-          staticWhite
-          class="spectrum-ActionGroup-item"
-        />
+        <ActionButton icon={Edit18} staticWhite />
+        <ActionButton icon={Copy18} staticWhite />
+        <ActionButton icon={Delete18} staticWhite />
       </ActionGroup>
     </ActionBar>
   </Theme>
