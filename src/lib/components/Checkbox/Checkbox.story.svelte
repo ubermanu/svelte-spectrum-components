@@ -69,10 +69,6 @@
   </Hst.Variant>
 </Hst.Story>
 
-<style>
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+<style global>
+  @import '$lib/histoire/styles.css';
 </style>
