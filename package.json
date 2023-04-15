@@ -12,6 +12,8 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "!dist/assets",
+    "!dist/**/*.story.*",
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
