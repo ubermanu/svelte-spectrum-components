@@ -73,6 +73,7 @@
     "@spectrum-css/quickaction": "^3.0.38",
     "@spectrum-css/rating": "^3.0.37",
     "@spectrum-css/stepper": "^4.0.9",
+    "@spectrum-css/tabs": "^3.2.35",
     "@spectrum-css/textfield": "^4.1.5",
     "@spectrum-css/tokens": "^8.0.2",
     "@spectrum-css/tooltip": "^5.0.14",
