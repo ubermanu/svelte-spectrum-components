@@ -23,4 +23,4 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Tests
-        uses: pnpm run tests
+        run: pnpm run tests
