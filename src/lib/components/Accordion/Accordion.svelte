@@ -21,11 +21,6 @@
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
-<div
-  class="spectrum-Accordion {additionalClasses}"
-  role="region"
-  data-testid="accordion"
-  {...rest}
->
+<div class="spectrum-Accordion {additionalClasses}" role="region" {...rest}>
   <slot />
 </div>
