@@ -6,6 +6,7 @@ const config = {
   plugins: [sveltekit()],
   test: {
     environment: 'jsdom',
+    globals: true,
     include: ['src/**/*.{test,spec}.{js,ts}'],
   },
 }

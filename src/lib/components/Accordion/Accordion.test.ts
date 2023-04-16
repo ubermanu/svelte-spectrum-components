@@ -10,7 +10,6 @@ test('Renders with no children', async () => {
 
   expect(getByTestId('accordion')).toBeTruthy()
   expect(getByTestId('accordion').children.length).toBe(0)
-  getByTestId('accordion').remove()
 })
 
 test('Renders with children', async () => {
@@ -27,7 +26,6 @@ test('Renders with children', async () => {
   expect(getByTestId('accordion-item-1')).toBeTruthy()
   expect(getByTestId('accordion-item-2')).toBeTruthy()
   expect(getByTestId('accordion').children.length).toBe(2)
-  getByTestId('accordion').remove()
 })
 
 test('Click on a child closes the others', async () => {
@@ -60,8 +58,6 @@ test('Click on a child closes the others', async () => {
   expect(
     getByTestId('accordion-item-2').classList.contains('is-open')
   ).toBeTruthy()
-
-  getByTestId('accordion').remove()
 })
 
 test('Click on a child does not close the others, if multipleAllowed', async () => {
@@ -95,6 +91,4 @@ test('Click on a child does not close the others, if multipleAllowed', async () 
   expect(
     getByTestId('accordion-item-2').classList.contains('is-open')
   ).toBeTruthy()
-
-  getByTestId('accordion').remove()
 })
