@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ActionButton, Menu, Popover } from '$lib'
+  import type { PopoverPlacement } from '$lib/spectrum/types'
 
   export let label: string = ''
   export let placement: PopoverPlacement = 'bottom'
