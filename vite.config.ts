@@ -5,6 +5,7 @@ import type { UserConfig as TestConfig } from 'vitest'
 const config = {
   plugins: [sveltekit()],
   test: {
+    environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,ts}'],
   },
 }
