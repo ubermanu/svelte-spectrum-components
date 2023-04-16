@@ -4,6 +4,6 @@
   export let scale: string = 'medium'
 </script>
 
-<div class="spectrum spectrum--{color} spectrum--{scale}">
+<div class="spectrum spectrum--{color} spectrum--{scale}" {...$$restProps}>
   <slot />
 </div>
