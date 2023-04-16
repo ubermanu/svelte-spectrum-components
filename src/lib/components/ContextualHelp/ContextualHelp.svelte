@@ -10,9 +10,11 @@
   function handleClick() {
     open = !open
   }
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
-<div class="spectrum-ContextualHelp">
+<div class="spectrum-ContextualHelp {additionalClasses}" {...rest}>
   <ActionButton
     type="button"
     class="spectrum-ContextualHelp-button"
