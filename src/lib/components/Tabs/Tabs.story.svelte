@@ -7,7 +7,15 @@
 
 <Hst.Story>
   <Theme>
+    <p>Horizontal</p>
     <Tabs>
+      <Tab>Tab 1</Tab>
+      <Tab>Tab 2</Tab>
+      <Tab>Tab 3</Tab>
+    </Tabs>
+    <br />
+    <p>Vertical</p>
+    <Tabs orientation="vertical">
       <Tab>Tab 1</Tab>
       <Tab>Tab 2</Tab>
       <Tab>Tab 3</Tab>

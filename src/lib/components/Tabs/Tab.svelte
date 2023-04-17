@@ -9,12 +9,15 @@
   export let icon: SvelteComponent | null = null
   export let iconLabel: string = ''
 
-  const { selectedItem, selectTab } = getContext('tabs')
+  let el: HTMLElement
+  const { selectedItem, selectTab, tabs } = getContext('tabs')
 
   onMount(() => {
     if (selected) {
       $selectedItem = id
     }
+
+    $tabs = [...$tabs, { id, el }]
 
     selectedItem.subscribe((sid) => {
       selected = sid === id
@@ -23,6 +26,7 @@
 </script>
 
 <div
+  bind:this={el}
   class="spectrum-Tabs-item"
   class:is-selected={selected}
   tabindex="0"

@@ -10,13 +10,14 @@
   export let emphasized: boolean = false
   export let compact: boolean = false
 
+  const tabs = writable([])
   const selectedItem = writable('')
 
   const selectTab = (id: string) => {
     selectedItem.set(id)
   }
 
-  setContext('tabs', { selectedItem, selectTab, orientation })
+  setContext('tabs', { selectedItem, selectTab, orientation, tabs })
 </script>
 
 <div

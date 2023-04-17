@@ -88,6 +88,9 @@ dependencies:
   '@spectrum-css/menu':
     specifier: ^4.0.17
     version: 4.0.17(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/modal':
+    specifier: ^3.0.35
+    version: 3.0.35(@spectrum-css/vars@9.0.0)
   '@spectrum-css/page':
     specifier: ^5.0.20
     version: 5.0.20
@@ -881,7 +884,7 @@ packages:
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
-  /@spectrum-css/dialog@6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0):
+  /@spectrum-css/dialog@6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.35)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0):
     resolution: {integrity: sha512-66pqAHDe9aF+3CnFWXJfr5d27fZr17e58GFa0axRZq/5bExqN4nFxNdMSBh7myO2j3e9WJO5r1dldDhvJpkkFw==}
     peerDependencies:
       '@spectrum-css/button': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -898,7 +901,7 @@ packages:
       '@spectrum-css/closebutton': 3.0.26(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/divider': 2.0.25(@spectrum-css/tokens@8.0.2)
       '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
-      '@spectrum-css/modal': 3.0.34(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/modal': 3.0.35(@spectrum-css/vars@9.0.0)
       '@spectrum-css/underlay': 2.0.41(@spectrum-css/vars@9.0.0)
       '@spectrum-css/vars': 9.0.0
     dev: false
@@ -977,10 +980,10 @@ packages:
       '@spectrum-css/vars': 9.0.0
     dev: false
 
-  /@spectrum-css/modal@3.0.34(@spectrum-css/vars@9.0.0):
-    resolution: {integrity: sha512-JftnnDMyCa61V7O9OV3dlbe7Aor6r3Jv20qrYQukuLTNFDEvg6gdU0paWhJHKCOOe2oefmNwgaARLCR3lleNJg==}
+  /@spectrum-css/modal@3.0.35(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-zK71eAbM0UxhE8P4FO6xlEDa1ObNBbpS/4M+q75ic48FUVB5PREWiFBKeQRNsRdjimzW/v9I+UhjHt1DpSAjqw==}
     peerDependencies:
-      '@spectrum-css/vars': ^8.0.0
+      '@spectrum-css/vars': '>=9.0.0'
     dependencies:
       '@spectrum-css/vars': 9.0.0
     dev: false
@@ -1025,7 +1028,7 @@ packages:
       '@spectrum-css/dialog': ^6.0.0
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
-      '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.34)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/dialog': 6.0.31(@spectrum-css/button@9.0.14)(@spectrum-css/buttongroup@6.0.29)(@spectrum-css/closebutton@3.0.26)(@spectrum-css/divider@2.0.25)(@spectrum-css/icon@3.0.36)(@spectrum-css/modal@3.0.35)(@spectrum-css/underlay@2.0.41)(@spectrum-css/vars@9.0.0)
       '@spectrum-css/tokens': 8.0.2
     dev: false
 
