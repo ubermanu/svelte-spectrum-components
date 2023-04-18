@@ -28,6 +28,13 @@
     size = actionGroup.size
   }
 
+  const actionBar = getContext('actionBar')
+
+  // Set as staticWhite if the action bar is emphasized
+  if (actionBar && actionBar.emphasized) {
+    staticWhite = true
+  }
+
   export let button: HTMLButtonElement
 
   const { class: additionalClasses = '', ...rest } = $$restProps
