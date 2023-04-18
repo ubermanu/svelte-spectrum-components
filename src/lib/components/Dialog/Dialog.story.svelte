@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
+  import { logEvent } from 'histoire/client'
   import { Dialog, ConfirmationDialog, ErrorDialog, Theme } from '$lib'
   import cardPortrait from '$lib/assets/example-card-portrait.jpg'
 
@@ -20,7 +21,7 @@
         heading="Disclaimer"
         dismissable
         noDivider
-        on:dismiss={() => console.log('dismiss')}
+        on:dismiss={(e) => logEvent('dismiss', e)}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
@@ -42,7 +43,7 @@
         dismissable
         noDivider
         image={cardPortrait}
-        on:dismiss={() => console.log('dismiss')}
+        on:dismiss={(e) => logEvent('dismiss', e)}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
@@ -61,8 +62,8 @@
     <Theme>
       <ConfirmationDialog
         heading="Enable Smart Filters?"
-        on:cancel={() => console.log('cancel')}
-        on:accept={() => console.log('accept')}
+        on:cancel={(e) => logEvent('cancel', e)}
+        on:accept={(e) => logEvent('accept', e)}
       >
         Smart filters are nondestructive and will preserve your original images.
       </ConfirmationDialog>
@@ -74,8 +75,8 @@
         variant="informative"
         heading="Connect to WiFi"
         acceptLabel="Continue"
-        on:cancel={() => console.log('cancel')}
-        on:accept={() => console.log('accept')}
+        on:cancel={(e) => logEvent('cancel', e)}
+        on:accept={(e) => logEvent('accept', e)}
       >
         Please connect to WiFi to sync your projects or go to Settings to change
         your preferences.
@@ -88,8 +89,8 @@
         variant="destructive"
         heading="Delete 3 Documents"
         acceptLabel="Delete"
-        on:cancel={() => console.log('cancel')}
-        on:accept={() => console.log('accept')}
+        on:cancel={(e) => logEvent('cancel', e)}
+        on:accept={(e) => logEvent('accept', e)}
       >
         Are you sure you want to delete the 3 selected documents?
       </ConfirmationDialog>
@@ -99,7 +100,7 @@
     <Theme>
       <ErrorDialog
         heading="Unable to Share"
-        on:accept={() => console.log('accept')}
+        on:accept={(e) => logEvent('accept', e)}
       >
         An error occurred while sharing your project. Please verify the email
         address and try again.
