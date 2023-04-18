@@ -1,6 +1,18 @@
 {
   "name": "svelte-spectrum-components",
   "version": "0.1.0",
+  "description": "Spectrum CSS components for Svelte",
+  "keywords": [
+    "svelte",
+    "spectrum-css",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubermanu/svelte-spectrum-components.git"
+  },
+  "license": "MIT",
+  "author": "Emmanuel Vodor <manu@paca.happy-dev.fr>",
   "type": "module",
   "exports": {
     ".": {
@@ -13,6 +25,7 @@
   "files": [
     "dist",
     "!dist/assets",
+    "!dist/histoire",
     "!dist/**/*.story.*",
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
