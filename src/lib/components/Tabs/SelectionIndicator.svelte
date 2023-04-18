@@ -4,7 +4,7 @@
   let start, size
   const { orientation, tabs, selectedTabId } = getContext('tabs')
 
-  $: tab = $tabs.find((tab) => tab.id === $selectedTabId) ?? $tabs[0] ?? null
+  $: tab = $tabs.find((tab) => tab.id === $selectedTabId)
 
   // If horizontal, we need to set the left position of the selection indicator
   // according to the index of the selected tab.

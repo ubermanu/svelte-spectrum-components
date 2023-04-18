@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { TShirtSize } from '$lib/spectrum/types'
-  import { setContext } from 'svelte'
+  import { onMount, setContext, createEventDispatcher, tick } from 'svelte'
   import { writable } from 'svelte/store'
   import SelectionIndicator from './SelectionIndicator.svelte'
 
@@ -13,13 +13,24 @@
   const tabs = writable([])
   const selectedTabId = writable('')
 
+  const dispatch = createEventDispatcher()
+
+  /** Selects a tab by id, and dispatches a select event */
   const selectTab = (id: string) => {
     selectedTabId.set(id)
+    dispatch('select', { id })
   }
 
-  setContext('tabs', { selectedTabId, selectTab, orientation, tabs })
+  onMount(async () => {
+    await tick()
 
-  export { tabs, selectedTabId, selectTab }
+    // Select the first tab if none is selected
+    if (!$selectedTabId && $tabs.length > 0) {
+      $selectedTabId = $tabs[0]?.id
+    }
+  })
+
+  setContext('tabs', { selectedTabId, selectTab, orientation, tabs })
 
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>

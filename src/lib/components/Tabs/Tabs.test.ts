@@ -1,6 +1,7 @@
 import { render } from '@testing-library/svelte'
 import { expect, test } from 'vitest'
 
+import { tick } from 'svelte'
 import TabsTest from './Tabs.test.svelte'
 
 test('Renders without any children', async () => {
@@ -30,4 +31,24 @@ test('Renders with children', async () => {
   // Check that the second item is not selected
   expect(getByTestId('tab-item-2')).toBeTruthy()
   expect(getByTestId('tab-item-2').classList.contains('is-selected')).toBe(true)
+})
+
+test('Renders with children with no selected items', async () => {
+  const { getByTestId } = render(TabsTest, {
+    props: {
+      items: [
+        { id: '1', label: 'Hello' },
+        { id: '2', label: 'World' },
+      ],
+    },
+  })
+
+  // Wait for the component to fully render
+  await tick()
+
+  // Check that the first item is selected (by default)
+  expect(getByTestId('tab-item-1').classList.contains('is-selected')).toBe(true)
+  expect(getByTestId('tab-item-2').classList.contains('is-selected')).toBe(
+    false
+  )
 })

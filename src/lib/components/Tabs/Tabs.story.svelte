@@ -11,7 +11,7 @@
     <Tabs>
       <Tab>Tab 1</Tab>
       <Tab>Tab 2</Tab>
-      <Tab>Tab 3</Tab>
+      <Tab selected>Tab 3</Tab>
     </Tabs>
     <br />
     <p>Vertical</p>
