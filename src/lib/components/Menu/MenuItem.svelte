@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext, onDestroy, onMount } from 'svelte'
+  import { getContext, onMount } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import { Icon } from '$lib'
   import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
@@ -17,7 +17,6 @@
     getContext('menu')
 
   let el
-  let sub
 
   onMount(() => {
     const itemData = {
@@ -33,15 +32,15 @@
       $selectedItems = [...$selectedItems, id]
     }
 
-    sub = selectedItems.subscribe((items) => {
+    const unsub = selectedItems.subscribe((items) => {
       selected = items.includes(id)
     })
-  })
 
-  onDestroy(async () => {
-    $items = $items.filter((item) => item.id !== id)
-    $selectedItems = $selectedItems.filter((item) => item !== id)
-    if (sub) await sub()
+    return () => {
+      $items = $items.filter((item) => item.id !== id)
+      $selectedItems = $selectedItems.filter((item) => item !== id)
+      unsub()
+    }
   })
 
   /**
@@ -98,11 +97,13 @@
       $items[$items.length - 1]?.el?.focus()
     }
   }
+
+  const { class: additionalClasses, ...rest } = $$restProps
 </script>
 
 <li
   bind:this={el}
-  class="spectrum-Menu-item"
+  class="spectrum-Menu-item {additionalClasses}"
   role="menuitem"
   class:is-disabled={disabled}
   class:is-selected={selected}
@@ -110,6 +111,7 @@
   tabindex={disabled ? -1 : 0}
   on:click={handleClick}
   on:keydown={handleKeyDown}
+  {...rest}
 >
   <span class="spectrum-Menu-itemLabel" bind:this={label}><slot /></span>
   {#if selected}
