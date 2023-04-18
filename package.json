@@ -55,6 +55,7 @@
     "@spectrum-css/colorloupe": "^2.0.18",
     "@spectrum-css/combobox": "^1.0.6",
     "@spectrum-css/contextualhelp": "^1.0.4",
+    "@spectrum-css/dialog": "^6.0.34",
     "@spectrum-css/divider": "^2.0.25",
     "@spectrum-css/fieldlabel": "^6.0.15",
     "@spectrum-css/helptext": "^4.0.14",

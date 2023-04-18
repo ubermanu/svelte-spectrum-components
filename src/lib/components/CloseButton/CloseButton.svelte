@@ -7,13 +7,15 @@
 
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
-  class="spectrum-CloseButton spectrum-CloseButton--size{size}"
+  class="spectrum-CloseButton spectrum-CloseButton--size{size} {additionalClasses}"
   class:spectrum-CloseButton--staticWhite={staticWhite}
   class:spectrum-CloseButton--staticBlack={staticBlack}
-  {...$$restProps}
+  {...rest}
   on:click
 >
   <Icon

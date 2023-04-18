@@ -32,6 +32,7 @@
 @import '@spectrum-css/colorloupe';
 @import '@spectrum-css/combobox';
 @import '@spectrum-css/contextualhelp';
+@import '@spectrum-css/dialog';
 @import '@spectrum-css/divider';
 @import '@spectrum-css/fieldlabel';
 @import '@spectrum-css/helptext';
@@ -41,6 +42,7 @@
 @import '@spectrum-css/link';
 @import '@spectrum-css/logicbutton';
 @import '@spectrum-css/menu';
+@import '@spectrum-css/modal';
 @import '@spectrum-css/picker';
 @import '@spectrum-css/popover';
 @import '@spectrum-css/progressbar';
