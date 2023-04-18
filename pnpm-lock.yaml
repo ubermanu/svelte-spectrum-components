@@ -25,6 +25,9 @@ dependencies:
   '@spectrum-css/asset':
     specifier: ^3.0.33
     version: 3.0.33(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/avatar':
+    specifier: ^6.0.15
+    version: 6.0.15(@spectrum-css/tokens@8.0.2)
   '@spectrum-css/badge':
     specifier: ^3.0.14
     version: 3.0.14(@spectrum-css/tokens@8.0.2)
@@ -745,6 +748,14 @@ packages:
       '@spectrum-css/vars': ^8.0.0
     dependencies:
       '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/avatar@6.0.15(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-ZqNqp3mw5QZFTf3cNwB4QVEafB9P/CvdFzHA6YXEOvV/cj2uFhJS3qyOriL7K0GC48bBW/aVRTi2qtrEi/r0YA==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.0.2
     dev: false
 
   /@spectrum-css/badge@3.0.14(@spectrum-css/tokens@8.0.2):

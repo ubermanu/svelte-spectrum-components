@@ -9,6 +9,7 @@ export { default as ActionMenu } from './components/ActionMenu/ActionMenu.svelte
 export { default as AssetFile } from './components/Asset/File.svelte'
 export { default as AssetFolder } from './components/Asset/Folder.svelte'
 export { default as AssetImage } from './components/Asset/Image.svelte'
+export { default as Avatar } from './components/Avatar/Avatar.svelte'
 export { default as Badge } from './components/Badge/Badge.svelte'
 export { default as Breadcrumb } from './components/Breadcrumb/Breadcrumb.svelte'
 export { default as BreadcrumbItem } from './components/Breadcrumb/BreadcrumbItem.svelte'
