@@ -10,18 +10,25 @@
   export let iconLabel: string = ''
 
   let el: HTMLElement
-  const { selectedItem, selectTab, tabs } = getContext('tabs')
+  const { selectedTabId, selectTab, tabs } = getContext('tabs')
 
   onMount(() => {
     if (selected) {
-      $selectedItem = id
+      $selectedTabId = id
     }
 
     $tabs = [...$tabs, { id, el }]
+    console.log('tab pushed', { id, el }, $tabs)
 
-    selectedItem.subscribe((sid) => {
+    const unsub = selectedTabId.subscribe((sid) => {
       selected = sid === id
     })
+
+    return () => {
+      $tabs = $tabs.filter((tab) => tab.id !== id)
+      console.log('tab removed', { id, el }, $tabs)
+      unsub()
+    }
   })
 </script>
 

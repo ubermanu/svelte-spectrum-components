@@ -11,13 +11,15 @@
   export let compact: boolean = false
 
   const tabs = writable([])
-  const selectedItem = writable('')
+  const selectedTabId = writable('')
 
   const selectTab = (id: string) => {
-    selectedItem.set(id)
+    selectedTabId.set(id)
   }
 
-  setContext('tabs', { selectedItem, selectTab, orientation, tabs })
+  setContext('tabs', { selectedTabId, selectTab, orientation, tabs })
+
+  export { tabs, selectedTabId, selectTab }
 </script>
 
 <div

@@ -2,9 +2,9 @@
   import { getContext } from 'svelte'
 
   let start, size
-  const { orientation, tabs, selectedItem } = getContext('tabs')
+  const { orientation, tabs, selectedTabId } = getContext('tabs')
 
-  $: tab = $tabs.find((tab) => tab.id === $selectedItem)
+  $: tab = $tabs.find((tab) => tab.id === $selectedTabId) ?? $tabs[0] ?? null
 
   // If horizontal, we need to set the left position of the selection indicator
   // according to the index of the selected tab.
