@@ -14,13 +14,16 @@
     // open = false
     console.log(event.detail)
   }
+
+  // The reference to the action button element (for positioning the popover)
+  let button: HTMLButtonElement
 </script>
 
-<ActionButton on:click={toggle} {...$$restProps} selected={open}>
+<ActionButton bind:button on:click={toggle} {...$$restProps} selected={open}>
   {label}
 </ActionButton>
-<br />
-<Popover bind:open {placement}>
+
+<Popover bind:open {placement} attachTo={button}>
   <Menu on:select={handleSelect}>
     <slot />
   </Menu>

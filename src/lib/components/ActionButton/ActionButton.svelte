@@ -28,10 +28,13 @@
     size = actionGroup.size
   }
 
+  export let button: HTMLButtonElement
+
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
+  bind:this={button}
   class="spectrum-ActionButton spectrum-ActionButton--size{size} {additionalClasses}"
   class:spectrum-ActionButton--quiet={quiet}
   class:spectrum-ActionButton--emphasized={emphasized}
