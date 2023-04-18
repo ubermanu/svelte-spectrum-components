@@ -18,7 +18,6 @@
     }
 
     $tabs = [...$tabs, { id, el }]
-    console.log('tab pushed', { id, el }, $tabs)
 
     const unsub = selectedTabId.subscribe((sid) => {
       selected = sid === id
@@ -26,20 +25,22 @@
 
     return () => {
       $tabs = $tabs.filter((tab) => tab.id !== id)
-      console.log('tab removed', { id, el }, $tabs)
       unsub()
     }
   })
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
   bind:this={el}
-  class="spectrum-Tabs-item"
+  class="spectrum-Tabs-item {additionalClasses}"
   class:is-selected={selected}
   tabindex="0"
   role="tab"
   aria-selected={selected}
   on:click={() => selectTab(id)}
+  {...rest}
 >
   <span class="spectrum-Tabs-itemLabel">
     {#if icon}

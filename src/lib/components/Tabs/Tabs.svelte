@@ -20,14 +20,17 @@
   setContext('tabs', { selectedTabId, selectTab, orientation, tabs })
 
   export { tabs, selectedTabId, selectTab }
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
   role="tablist"
-  class="spectrum-Tabs spectrum-Tabs--size{size} spectrum-Tabs--{orientation}"
+  class="spectrum-Tabs spectrum-Tabs--size{size} spectrum-Tabs--{orientation} {additionalClasses}"
   class:spectrum-Tabs--quiet={quiet || compact}
   class:spectrum-Tabs--emphasized={emphasized}
   class:spectrum-Tabs--compact={compact}
+  {...rest}
 >
   <slot />
   <SelectionIndicator />
