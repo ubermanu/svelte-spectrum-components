@@ -1,14 +1,25 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Asset } from '$lib'
+  import { AssetImage, AssetFile, AssetFolder, Theme } from '$lib'
   import exampleAva from '$lib/assets/example-ava.jpg'
 
   export let Hst: Hst
 </script>
 
-<Hst.Story>
-  <Asset
-    src={exampleAva}
-    style="max-width: 75%; max-height: 75%; object-fit: contain;"
-  />
+<Hst.Story layout={{ type: 'grid', width: '100%' }}>
+  <Hst.Variant title="Image">
+    <Theme>
+      <AssetImage src={exampleAva} />
+    </Theme>
+  </Hst.Variant>
+  <Hst.Variant title="File">
+    <Theme>
+      <AssetFile />
+    </Theme>
+  </Hst.Variant>
+  <Hst.Variant title="Folder">
+    <Theme>
+      <AssetFolder />
+    </Theme>
+  </Hst.Variant>
 </Hst.Story>

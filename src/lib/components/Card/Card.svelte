@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Asset, QuickActions } from '$lib'
+  import { AssetImage, QuickActions } from '$lib'
   import type { TShirtSize } from '$lib/spectrum/types'
 
   export let size: TShirtSize = 'M'
@@ -22,7 +22,7 @@
 >
   {#if coverPhoto}
     <div class="spectrum-Card-preview">
-      <Asset
+      <AssetImage
         src={coverPhoto}
         style="max-width: 75%; max-height: 75%; object-fit: contain;"
       />
