@@ -27,13 +27,14 @@ export const clickOutside: Action = (
   }
 
   function toggleHandler(enabled: boolean) {
+    // Deconstruct the document object to prevent an unknown ref to document
+    // in the setTimeout call.
+    const { addEventListener, removeEventListener } = document
+
     // A timeout is needed to prevent the click event from bubbling up to the
     // document and triggering the handler.
     setTimeout(() => {
-      ;(enabled ? document.addEventListener : document.removeEventListener)(
-        'click',
-        handler
-      )
+      ;(enabled ? addEventListener : removeEventListener)('click', handler)
     })
   }
 
