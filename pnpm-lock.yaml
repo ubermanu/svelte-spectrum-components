@@ -25,6 +25,9 @@ dependencies:
   '@spectrum-css/asset':
     specifier: ^3.0.33
     version: 3.0.33(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/assetcard':
+    specifier: ^1.1.20
+    version: 1.1.20(@spectrum-css/checkbox@6.0.14)(@spectrum-css/icon@3.0.36)(@spectrum-css/typography@4.0.30)(@spectrum-css/vars@9.0.0)
   '@spectrum-css/avatar':
     specifier: ^6.0.15
     version: 6.0.15(@spectrum-css/tokens@8.0.2)
@@ -747,6 +750,20 @@ packages:
     peerDependencies:
       '@spectrum-css/vars': ^8.0.0
     dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/assetcard@1.1.20(@spectrum-css/checkbox@6.0.14)(@spectrum-css/icon@3.0.36)(@spectrum-css/typography@4.0.30)(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-Gl8OLcitCopA/6BzIyQbZIBkxl5mobQb/wXRr1wxyw9beL3KwGyVnM4xbCRTHh5dcaoW9UAADQ2ff4k9yLunjQ==}
+    peerDependencies:
+      '@spectrum-css/checkbox': ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/typography': ^4.0.0
+      '@spectrum-css/vars': '>=9.0.0'
+    dependencies:
+      '@spectrum-css/checkbox': 6.0.14(@spectrum-css/icon@3.0.36)(@spectrum-css/tokens@8.0.2)
+      '@spectrum-css/icon': 3.0.36(@spectrum-css/vars@9.0.0)
+      '@spectrum-css/typography': 4.0.30(@spectrum-css/vars@9.0.0)
       '@spectrum-css/vars': 9.0.0
     dev: false
 

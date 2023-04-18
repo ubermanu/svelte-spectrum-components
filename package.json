@@ -42,6 +42,7 @@
     "@spectrum-css/actiongroup": "^3.0.27",
     "@spectrum-css/actionmenu": "^4.0.14",
     "@spectrum-css/asset": "^3.0.33",
+    "@spectrum-css/assetcard": "^1.1.20",
     "@spectrum-css/avatar": "^6.0.15",
     "@spectrum-css/badge": "^3.0.14",
     "@spectrum-css/breadcrumb": "^7.0.14",

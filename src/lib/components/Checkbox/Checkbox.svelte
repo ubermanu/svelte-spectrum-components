@@ -11,10 +11,14 @@
   export let size: TShirtSize = 'M'
   export let emphasized: boolean = false
   export let indeterminate: boolean = false
+  export let checked: boolean = false
+
+  export let containerClass: string = ''
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <label
-  class="spectrum-Checkbox spectrum-Checkbox--size{size}"
+  class="spectrum-Checkbox spectrum-Checkbox--size{size} {containerClass}"
   class:spectrum-Checkbox--emphasized={emphasized}
   class:is-indeterminate={indeterminate}
   class:is-invalid={invalid}
@@ -23,10 +27,11 @@
 >
   <input
     type="checkbox"
-    class="spectrum-Checkbox-input"
+    class="spectrum-Checkbox-input {additionalClasses}"
     disabled={disabled || readonly}
-    {...$$restProps}
+    bind:checked
     on:change
+    {...rest}
   />
   <span class="spectrum-Checkbox-box">
     <Icon
