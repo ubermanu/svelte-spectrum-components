@@ -1,6 +1,10 @@
 <script lang="ts">
   import { Divider, CloseButton, ButtonGroup, Icon } from '$lib'
-  import { getContext, SvelteComponent } from 'svelte'
+  import {
+    createEventDispatcher,
+    getContext,
+    type SvelteComponent,
+  } from 'svelte'
 
   export let size: 'small' | 'medium' | 'large' | 'fullscreen' = 'medium'
   export let open: boolean = false
@@ -10,6 +14,7 @@
   export let icon: SvelteComponent | undefined = undefined
   export let image: string | undefined = undefined
 
+  const dispatch = createEventDispatcher()
   const modal = getContext('modal')
 
   $: if (modal?.fullscreen) {
@@ -49,7 +54,7 @@
       <CloseButton
         aria-label="Dismiss"
         class="spectrum-Dialog-closeButton"
-        on:click={() => modal?.closeModal()}
+        on:click={() => dispatch('dismiss')}
       />
     {/if}
     {#if $$slots.buttons}

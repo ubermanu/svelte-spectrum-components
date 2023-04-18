@@ -16,7 +16,12 @@
   </Hst.Variant>
   <Hst.Variant title="No divider">
     <Theme>
-      <Dialog heading="Disclaimer" dismissable noDivider>
+      <Dialog
+        heading="Disclaimer"
+        dismissable
+        noDivider
+        on:dismiss={() => console.log('dismiss')}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
         augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas
@@ -32,7 +37,13 @@
   </Hst.Variant>
   <Hst.Variant title="Hero">
     <Theme>
-      <Dialog heading="Disclaimer" dismissable noDivider image={cardPortrait}>
+      <Dialog
+        heading="Disclaimer"
+        dismissable
+        noDivider
+        image={cardPortrait}
+        on:dismiss={() => console.log('dismiss')}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
         augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas
