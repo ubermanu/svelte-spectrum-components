@@ -6,4 +6,5 @@ export default defineConfig({
     base: '/svelte-spectrum-components/',
   },
   plugins: [HstSvelte()],
+  routerMode: 'hash',
 })
