@@ -43,11 +43,13 @@
       icon={Dash100}
     />
   </span>
-  <span class="spectrum-Checkbox-label">
-    {#if label}
-      {label}
-    {:else}
-      <slot />
-    {/if}
-  </span>
+  {#if label || $$slots.default}
+    <span class="spectrum-Checkbox-label">
+      {#if label}
+        {label}
+      {:else}
+        <slot />
+      {/if}
+    </span>
+  {/if}
 </label>
