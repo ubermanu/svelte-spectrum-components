@@ -1,22 +1,17 @@
 <script lang="ts">
   import { setContext } from 'svelte'
-  import { writable } from 'svelte/store'
+  import { createAccordionContext } from './context'
 
-  export let allowMultiple: boolean = false
+  export let multiple: boolean = false
 
-  const openedItems = writable([])
+  const accordion = createAccordionContext({ multiple })
 
-  function toggleItem(id: string) {
-    openedItems.update((items) => {
-      if (items.includes(id)) {
-        return items.filter((item) => item !== id)
-      } else {
-        return allowMultiple ? [...items, id] : [id]
-      }
-    })
-  }
+  // Update the multiple property on the context when the allowMultiple prop changes
+  const { config } = accordion
+  $: $config.multiple = multiple
 
-  setContext('accordion', { openedItems, toggleItem })
+  // Pass the context to the children
+  setContext('accordion', accordion)
 
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>

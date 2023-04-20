@@ -60,10 +60,10 @@ test('Click on a child closes the others', async () => {
   ).toBeTruthy()
 })
 
-test('Click on a child does not close the others, if multipleAllowed', async () => {
+test('Click on a child does not close the others, if multiple', async () => {
   const { getByTestId } = render(AccordionTest, {
     props: {
-      allowMultiple: true,
+      multiple: true,
       items: [
         { id: 1, title: 'Title 1', content: 'Content 1' },
         { id: 2, title: 'Title 2', content: 'Content 2' },

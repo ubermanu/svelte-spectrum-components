@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { onMount, getContext } from 'svelte'
+  import { getContext } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import { Icon } from '$lib'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+  import type { AccordionContext } from './context'
 
   const id = uuid()
 
@@ -10,23 +11,21 @@
   export let disabled: boolean = false
   export let label: string = ''
 
-  const { openedItems, toggleItem } = getContext('accordion')
+  const { openedItems, ...accordion } = getContext(
+    'accordion'
+  ) as AccordionContext
 
-  onMount(() => {
-    // If the item is open, add it to the list of opened items
-    if (open) {
-      $openedItems = [...$openedItems, id]
-    }
+  // If the item is open, add it to the list of opened items
+  if (open) {
+    accordion.openItem(id)
+  }
 
-    // Update the open state when the list of opened items changes
-    openedItems.subscribe((items) => {
-      open = items.includes(id)
-    })
-  })
+  // Reflect the open state from the context
+  $: open = $openedItems.includes(id)
 
   function handleClick() {
     if (disabled) return
-    toggleItem(id)
+    accordion.toggleItem(id)
   }
 
   const { class: additionalClasses = '', ...rest } = $$restProps

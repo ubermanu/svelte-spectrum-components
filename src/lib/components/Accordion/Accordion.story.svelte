@@ -28,7 +28,7 @@
   </Hst.Variant>
   <Hst.Variant title="Multiple">
     <Theme>
-      <Accordion allowMultiple>
+      <Accordion multiple>
         <AccordionItem label="Recent" open>
           <p>Item 1</p>
         </AccordionItem>
