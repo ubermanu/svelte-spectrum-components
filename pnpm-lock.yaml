@@ -124,6 +124,9 @@ dependencies:
   '@spectrum-css/rating':
     specifier: ^3.0.39
     version: 3.0.39(@spectrum-css/icon@3.0.38)(@spectrum-css/vars@9.0.2)
+  '@spectrum-css/splitbutton':
+    specifier: ^5.0.32
+    version: 5.0.32(@spectrum-css/button@9.1.5)(@spectrum-css/vars@9.0.2)
   '@spectrum-css/statuslight':
     specifier: ^6.0.18
     version: 6.0.18(@spectrum-css/tokens@8.1.1)
@@ -1103,6 +1106,16 @@ packages:
       '@spectrum-css/vars': '>=9.0.0'
     dependencies:
       '@spectrum-css/icon': 3.0.38(@spectrum-css/vars@9.0.2)
+      '@spectrum-css/vars': 9.0.2
+    dev: false
+
+  /@spectrum-css/splitbutton@5.0.32(@spectrum-css/button@9.1.5)(@spectrum-css/vars@9.0.2):
+    resolution: {integrity: sha512-k/w9HGESKrMnH2Gb2esK84dMeLYpg3iZe60iUGVcf26c3c40lFp2dTxwV958k3YlYTxA08qxuFQ5cW8kDZcAzg==}
+    peerDependencies:
+      '@spectrum-css/button': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      '@spectrum-css/vars': '>=9.0.0'
+    dependencies:
+      '@spectrum-css/button': 9.1.5(@spectrum-css/tokens@8.1.1)
       '@spectrum-css/vars': 9.0.2
     dev: false
 

@@ -88,6 +88,7 @@
     "@spectrum-css/progresscircle": "^2.0.29",
     "@spectrum-css/quickaction": "^3.0.42",
     "@spectrum-css/rating": "^3.0.39",
+    "@spectrum-css/splitbutton": "^5.0.32",
     "@spectrum-css/statuslight": "^6.0.18",
     "@spectrum-css/stepper": "^4.0.13",
     "@spectrum-css/tabs": "^3.2.38",
