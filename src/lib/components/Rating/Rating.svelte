@@ -8,11 +8,18 @@
 
   export let readonly: boolean = false
   export let label: string = 'Rating'
+  export let emphasized: boolean = false
+  export let disabled: boolean = false
 
   $: value = Math.min(Math.max(value, min), max)
 </script>
 
-<div class="spectrum-Rating" class:is-readOnly={readonly}>
+<div
+  class="spectrum-Rating"
+  class:spectrum-Rating--emphasized={emphasized}
+  class:is-readOnly={readonly}
+  class:is-disabled={disabled}
+>
   <input
     class="spectrum-Rating-input"
     type="range"
@@ -20,6 +27,7 @@
     {max}
     {value}
     {readonly}
+    {disabled}
     aria-label={label}
   />
 
