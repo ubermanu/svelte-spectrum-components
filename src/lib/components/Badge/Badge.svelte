@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
   import { Icon } from '$lib'
+  import type { TShirtSize } from '$lib/spectrum/types'
 
   export let variant:
     | 'neutral'
@@ -12,6 +13,8 @@
   export let size: TShirtSize = 'M'
 
   export let icon: SvelteComponent | undefined = undefined
+
+  export let color: 'white' | 'black' = 'white'
 
   export let fixed:
     | 'inline-start'
@@ -26,17 +29,21 @@
 
 <div
   class="spectrum-Badge spectrum-Badge--size{size} spectrum-Badge--{variant} {additionalClasses} {fixedClass}"
+  class:spectrum-Badge--black-text={color === 'black'}
   {...rest}
 >
   {#if icon}
     <Icon
       {icon}
+      {size}
       class="spectrum-Badge-icon {!$$slots.default
         ? 'spectrum-Badge-icon--noLabel'
         : ''}"
     />
   {/if}
-  <div class="spectrum-Badge-label">
-    <slot />
-  </div>
+  {#if $$slots.default}
+    <div class="spectrum-Badge-label">
+      <slot />
+    </div>
+  {/if}
 </div>
