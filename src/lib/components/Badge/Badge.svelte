@@ -37,7 +37,7 @@
       {icon}
       {size}
       class="spectrum-Badge-icon {!$$slots.default
-        ? 'spectrum-Badge-icon--noLabel'
+        ? 'spectrum-Badge-icon--no-label'
         : ''}"
     />
   {/if}
