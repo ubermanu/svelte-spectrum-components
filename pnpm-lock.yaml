@@ -121,6 +121,9 @@ dependencies:
   '@spectrum-css/quickaction':
     specifier: ^3.0.42
     version: 3.0.42(@spectrum-css/actionbutton@3.0.30)(@spectrum-css/checkbox@6.0.18)(@spectrum-css/vars@9.0.2)
+  '@spectrum-css/radio':
+    specifier: ^7.0.18
+    version: 7.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
   '@spectrum-css/rating':
     specifier: ^3.0.39
     version: 3.0.39(@spectrum-css/icon@3.0.38)(@spectrum-css/vars@9.0.2)
@@ -1097,6 +1100,16 @@ packages:
       '@spectrum-css/actionbutton': 3.0.30(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
       '@spectrum-css/checkbox': 6.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
       '@spectrum-css/vars': 9.0.2
+    dev: false
+
+  /@spectrum-css/radio@7.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1):
+    resolution: {integrity: sha512-SZAuHAn4mpFC4E7hZOD1G6jWGr2pY8MQV4xrN/fFhXJ4LZ9yjAhSbKHA3B/q3PTdWibNv7fy+N+AUd/sdcPaXA==}
+    peerDependencies:
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/icon': 3.0.38(@spectrum-css/vars@9.0.2)
+      '@spectrum-css/tokens': 8.1.1
     dev: false
 
   /@spectrum-css/rating@3.0.39(@spectrum-css/icon@3.0.38)(@spectrum-css/vars@9.0.2):
