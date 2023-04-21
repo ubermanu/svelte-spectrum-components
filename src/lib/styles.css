@@ -1,7 +1,5 @@
 @import '@spectrum-css/vars/dist/spectrum-global.css';
 
-@import '@spectrum-css/tokens/dist/index.css';
-
 /* Size */
 @import '@spectrum-css/vars/dist/spectrum-large.css';
 @import '@spectrum-css/vars/dist/spectrum-medium.css';
@@ -10,6 +8,13 @@
 @import '@spectrum-css/vars/dist/spectrum-dark.css';
 @import '@spectrum-css/vars/dist/spectrum-darkest.css';
 @import '@spectrum-css/vars/dist/spectrum-light.css';
+
+/* Vars */
+@import '@spectrum-css/tokens';
+
+/* Icons */
+@import '@spectrum-css/icon/dist/vars.css';
+@import '@spectrum-css/icon';
 
 /* Components */
 @import '@spectrum-css/accordion';
@@ -37,8 +42,6 @@
 @import '@spectrum-css/divider';
 @import '@spectrum-css/fieldlabel';
 @import '@spectrum-css/helptext';
-@import '@spectrum-css/icon/dist/vars.css';
-@import '@spectrum-css/icon';
 @import '@spectrum-css/inlinealert';
 @import '@spectrum-css/link';
 @import '@spectrum-css/logicbutton';
