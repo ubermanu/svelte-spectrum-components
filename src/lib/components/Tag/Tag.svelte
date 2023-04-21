@@ -22,6 +22,7 @@
   /** The tag is removed when the user presses the backspace or delete key. */
   function handleKeyDown(e: KeyboardEvent) {
     if (removable && ['Backspace', 'Delete'].includes(e.key)) {
+      e.preventDefault()
       dispatch('remove')
     }
   }
