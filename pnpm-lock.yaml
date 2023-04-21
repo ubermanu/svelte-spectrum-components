@@ -124,6 +124,9 @@ dependencies:
   '@spectrum-css/rating':
     specifier: ^3.0.39
     version: 3.0.39(@spectrum-css/icon@3.0.38)(@spectrum-css/vars@9.0.2)
+  '@spectrum-css/statuslight':
+    specifier: ^6.0.18
+    version: 6.0.18(@spectrum-css/tokens@8.1.1)
   '@spectrum-css/stepper':
     specifier: ^4.0.13
     version: 4.0.13(@spectrum-css/actionbutton@3.0.30)(@spectrum-css/icon@3.0.38)(@spectrum-css/textfield@4.1.9)(@spectrum-css/tokens@8.1.1)
@@ -1101,6 +1104,14 @@ packages:
     dependencies:
       '@spectrum-css/icon': 3.0.38(@spectrum-css/vars@9.0.2)
       '@spectrum-css/vars': 9.0.2
+    dev: false
+
+  /@spectrum-css/statuslight@6.0.18(@spectrum-css/tokens@8.1.1):
+    resolution: {integrity: sha512-Ryb82uXRradX20YN/DgNDJA1n/Mzft4z1eX4fY9TZk4YOaxNeskmGKWgbE6hfsLOGaTlGgyDvpPa6EOHZfdlFw==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.1.1
     dev: false
 
   /@spectrum-css/stepper@4.0.13(@spectrum-css/actionbutton@3.0.30)(@spectrum-css/icon@3.0.38)(@spectrum-css/textfield@4.1.9)(@spectrum-css/tokens@8.1.1):

@@ -47,6 +47,7 @@ export { default as ProgressBar } from './components/ProgressBar/ProgressBar.sve
 export { default as ProgressCircle } from './components/ProgressCircle/ProgressCircle.svelte'
 export { default as QuickActions } from './components/QuickActions/QuickActions.svelte'
 export { default as Rating } from './components/Rating/Rating.svelte'
+export { default as StatusLight } from './components/StatusLight/StatusLight.svelte'
 export { default as Stepper } from './components/Stepper/Stepper.svelte'
 export { default as Tab } from './components/Tabs/Tab.svelte'
 export { default as Tabs } from './components/Tabs/Tabs.svelte'
