@@ -52,6 +52,9 @@ dependencies:
   '@spectrum-css/checkbox':
     specifier: ^6.0.18
     version: 6.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
+  '@spectrum-css/clearbutton':
+    specifier: ^1.2.25
+    version: 1.2.25(@spectrum-css/vars@9.0.2)
   '@spectrum-css/closebutton':
     specifier: ^3.0.30
     version: 3.0.30(@spectrum-css/tokens@8.1.1)
@@ -139,6 +142,12 @@ dependencies:
   '@spectrum-css/tabs':
     specifier: ^3.2.38
     version: 3.2.38(@spectrum-css/menu@4.0.21)(@spectrum-css/picker@3.0.6)(@spectrum-css/vars@9.0.2)
+  '@spectrum-css/tag':
+    specifier: ^5.0.18
+    version: 5.0.18(@spectrum-css/clearbutton@1.2.25)(@spectrum-css/tokens@8.1.1)
+  '@spectrum-css/taggroup':
+    specifier: ^3.3.31
+    version: 3.3.31(@spectrum-css/clearbutton@1.2.25)(@spectrum-css/tag@5.0.18)(@spectrum-css/vars@9.0.2)
   '@spectrum-css/textfield':
     specifier: ^4.1.9
     version: 4.1.9(@spectrum-css/tokens@8.1.1)
@@ -864,6 +873,14 @@ packages:
       '@spectrum-css/tokens': 8.1.1
     dev: false
 
+  /@spectrum-css/clearbutton@1.2.25(@spectrum-css/vars@9.0.2):
+    resolution: {integrity: sha512-Cx6X3Npwhf4zrpgnwi+SIEZ1hhpIsGZ2ys4rTrYJvj4ZMVj5opDc6EfXIXENQWFZu3fH0jZcU+N0TTad1Zi9Qg==}
+    peerDependencies:
+      '@spectrum-css/vars': '>=9.0.0'
+    dependencies:
+      '@spectrum-css/vars': 9.0.2
+    dev: false
+
   /@spectrum-css/closebutton@3.0.30(@spectrum-css/tokens@8.1.1):
     resolution: {integrity: sha512-6sMjDQAxSZl1HWKOG8/2ecLCVgRtkV9/p0N66RxFZYB9LUA9sbkcbfPlVFGwoIcPbDo+YWhR5ShISOhHMOHgLQ==}
     peerDependencies:
@@ -1163,6 +1180,28 @@ packages:
     dependencies:
       '@spectrum-css/menu': 4.0.21(@spectrum-css/divider@2.0.29)(@spectrum-css/icon@3.0.38)(@spectrum-css/vars@9.0.2)
       '@spectrum-css/picker': 3.0.6(@spectrum-css/icon@3.0.38)(@spectrum-css/menu@4.0.21)(@spectrum-css/popover@6.0.33)(@spectrum-css/tokens@8.1.1)
+      '@spectrum-css/vars': 9.0.2
+    dev: false
+
+  /@spectrum-css/tag@5.0.18(@spectrum-css/clearbutton@1.2.25)(@spectrum-css/tokens@8.1.1):
+    resolution: {integrity: sha512-kKaTEfBPTXcRd99ZE/SVJemShcEE840Ui/1EpWwdTukX8v8Lof6iKagcdKSXU54+vSA2RTUO5SVAsb5X6PvQEA==}
+    peerDependencies:
+      '@spectrum-css/clearbutton': ^1.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/clearbutton': 1.2.25(@spectrum-css/vars@9.0.2)
+      '@spectrum-css/tokens': 8.1.1
+    dev: false
+
+  /@spectrum-css/taggroup@3.3.31(@spectrum-css/clearbutton@1.2.25)(@spectrum-css/tag@5.0.18)(@spectrum-css/vars@9.0.2):
+    resolution: {integrity: sha512-iYoA8NXSW6hrCVF2auV6UkUQBY1EMYLVwRj2WDQAMXcbN3AfYVLKFLSCRT3M0mIFzf6elOiXyMz4OuaNaYrVHg==}
+    peerDependencies:
+      '@spectrum-css/clearbutton': ^1.0.0
+      '@spectrum-css/tag': ^3.0.0 || ^4.0.0 || ^5.0.0
+      '@spectrum-css/vars': '>=9.0.0'
+    dependencies:
+      '@spectrum-css/clearbutton': 1.2.25(@spectrum-css/vars@9.0.2)
+      '@spectrum-css/tag': 5.0.18(@spectrum-css/clearbutton@1.2.25)(@spectrum-css/tokens@8.1.1)
       '@spectrum-css/vars': 9.0.2
     dev: false
 

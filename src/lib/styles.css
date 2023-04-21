@@ -32,6 +32,7 @@
 @import '@spectrum-css/calendar';
 @import '@spectrum-css/card';
 @import '@spectrum-css/checkbox';
+@import '@spectrum-css/clearbutton';
 @import '@spectrum-css/closebutton';
 @import '@spectrum-css/colorarea';
 @import '@spectrum-css/colorhandle';
@@ -59,6 +60,8 @@
 @import '@spectrum-css/statuslight';
 @import '@spectrum-css/stepper';
 @import '@spectrum-css/tabs';
+@import '@spectrum-css/tag';
+@import '@spectrum-css/taggroup';
 @import '@spectrum-css/textfield';
 @import '@spectrum-css/tooltip';
 @import '@spectrum-css/typography';
