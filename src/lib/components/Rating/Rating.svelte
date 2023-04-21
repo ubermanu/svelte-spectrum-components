@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Icon } from '$lib'
-  import Star18 from 'svelte-spectrum-icons/workflow/Star18.svelte'
-  import StarOutline18 from 'svelte-spectrum-icons/workflow/StarOutline18.svelte'
+  import { Star18, StarOutline18 } from 'svelte-spectrum-icons/workflow'
 
   export let value: number = 0
   export let min: number = 0
