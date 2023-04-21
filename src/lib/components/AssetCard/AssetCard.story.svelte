@@ -1,9 +1,10 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { AssetCard, Theme } from '$lib'
+  import { AssetCard } from '$lib'
   import exampleCardPortrait from '$lib/assets/example-card-portrait.jpg'
   import exampleCardLandscape from '$lib/assets/example-card-landscape.jpeg'
   import exampleCardSquare from '$lib/assets/example-card-square.png'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

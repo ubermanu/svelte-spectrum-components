@@ -1,12 +1,9 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Checkbox, Theme } from '$lib'
+  import { Checkbox } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
-
-  let invalid = false
-  let disabled = false
-  let readonly = false
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: '100%' }}>

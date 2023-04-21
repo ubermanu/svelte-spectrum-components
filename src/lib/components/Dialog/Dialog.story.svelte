@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
   import { logEvent } from 'histoire/client'
-  import { Dialog, ConfirmationDialog, ErrorDialog, Theme } from '$lib'
+  import { Dialog, ConfirmationDialog, ErrorDialog } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
   import cardPortrait from '$lib/assets/example-card-portrait.jpg'
 
   export let Hst: Hst

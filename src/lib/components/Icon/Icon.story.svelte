@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Icon, Theme } from '$lib'
+  import { Icon } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
   import Checkmark18 from 'svelte-spectrum-icons/workflow/Checkmark18.svelte'

@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
   import { logEvent } from 'histoire/client'
-  import { Menu, MenuItem, Theme } from '$lib'
+  import { Menu, MenuItem } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

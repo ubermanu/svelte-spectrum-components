@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Badge, Theme } from '$lib'
+  import { Badge } from '$lib'
   import { Info18 } from 'svelte-spectrum-icons/workflow'
+  import Theme from '$lib/histoire/Theme.svelte'
   // FIXME: Icon is not rendered correctly in stories
 
   export let Hst: Hst

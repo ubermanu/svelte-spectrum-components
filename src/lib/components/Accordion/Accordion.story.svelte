@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Accordion, AccordionItem, Theme } from '$lib'
+  import { Accordion, AccordionItem } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

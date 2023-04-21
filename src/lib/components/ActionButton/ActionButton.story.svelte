@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { ActionButton, Theme } from '$lib'
-  import Edit18 from 'svelte-spectrum-icons/workflow/Edit18.svelte'
+  import { Edit18 } from 'svelte-spectrum-icons/workflow'
+  import { ActionButton } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

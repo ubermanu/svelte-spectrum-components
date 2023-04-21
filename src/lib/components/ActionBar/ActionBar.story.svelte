@@ -1,11 +1,9 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
   import { logEvent } from 'histoire/client'
-  import { ActionBar, ActionButton, ActionGroup, FieldLabel, Theme } from '$lib'
-
-  import Edit18 from 'svelte-spectrum-icons/workflow/Edit18.svelte'
-  import Copy18 from 'svelte-spectrum-icons/workflow/Copy18.svelte'
-  import Delete18 from 'svelte-spectrum-icons/workflow/Delete18.svelte'
+  import { Edit18, Copy18, Delete18 } from 'svelte-spectrum-icons/workflow'
+  import { ActionBar, ActionButton, ActionGroup, FieldLabel } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

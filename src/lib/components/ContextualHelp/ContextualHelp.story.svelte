@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { ContextualHelp, Theme } from '$lib'
+  import { ContextualHelp } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>

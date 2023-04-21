@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst } from '@histoire/plugin-svelte'
-  import { Combobox, MenuItem, Theme } from '$lib'
+  import { Combobox, MenuItem } from '$lib'
+  import Theme from '$lib/histoire/Theme.svelte'
 
   export let Hst: Hst
 </script>
