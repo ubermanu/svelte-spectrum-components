@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext, onMount } from 'svelte'
+  import { getContext, onMount, type SvelteComponent } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import { Icon } from '$lib'
   import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
@@ -12,6 +12,8 @@
   export let value: string = ''
   export let disabled: boolean = false
   export let selected: boolean = false
+
+  export let icon: SvelteComponent | null = null
 
   const { selectable, items, selectedItems, toggleItem, dispatch } =
     getContext('menu')
@@ -98,21 +100,28 @@
     }
   }
 
+  const menuGroup = getContext('menuGroup')
+  const role = menuGroup ? 'option' : 'menuitem'
+
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <li
   bind:this={el}
   class="spectrum-Menu-item {additionalClasses}"
-  role="menuitem"
+  {role}
   class:is-disabled={disabled}
   class:is-selected={selected}
   aria-disabled={disabled || undefined}
   tabindex={disabled ? -1 : 0}
   on:click={handleClick}
+  on:click
   on:keydown={handleKeyDown}
   {...rest}
 >
+  {#if icon}
+    <Icon {icon} class="spectrum-Menu-itemIcon" />
+  {/if}
   <span class="spectrum-Menu-itemLabel" bind:this={label}><slot /></span>
   {#if selected}
     <Icon

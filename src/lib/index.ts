@@ -39,6 +39,7 @@ export { default as InLineAlert } from './components/InLineAlert/InLineAlert.sve
 export { default as Link } from './components/Link/Link.svelte'
 export { default as LogicButton } from './components/LogicButton/LogicButton.svelte'
 export { default as Menu } from './components/Menu/Menu.svelte'
+export { default as MenuGroup } from './components/Menu/MenuGroup.svelte'
 export { default as MenuItem } from './components/Menu/MenuItem.svelte'
 export { default as Meter } from './components/Meter/Meter.svelte'
 export { default as Modal } from './components/Modal/Modal.svelte'
