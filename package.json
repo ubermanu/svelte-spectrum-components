@@ -112,6 +112,7 @@
     "@testing-library/svelte": "^3.2.2",
     "@ubermanu/prettier-config": "^1.7.1",
     "histoire": "^0.16.1",
+    "jest-mock": "^29.5.0",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
     "publint": "^0.1.9",
