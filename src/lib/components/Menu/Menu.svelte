@@ -57,8 +57,10 @@
   }
 
   export { items, selectedItems }
+
+  const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
-<ul class="spectrum-Menu" role="menu" on:click>
+<ul class="spectrum-Menu {additionalClasses}" role="menu" on:click {...rest}>
   <slot />
 </ul>
