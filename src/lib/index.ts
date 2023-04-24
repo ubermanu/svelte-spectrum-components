@@ -30,6 +30,7 @@ export { default as ConfirmationDialog } from './components/Dialog/Confirmation.
 export { default as Dialog } from './components/Dialog/Dialog.svelte'
 export { default as ErrorDialog } from './components/Dialog/Error.svelte'
 export { default as Divider } from './components/Divider/Divider.svelte'
+export { default as FieldGroup } from './components/FieldGroup/FieldGroup.svelte'
 export { default as FieldLabel } from './components/FieldLabel/FieldLabel.svelte'
 export { default as Form } from './components/Form/Form.svelte'
 export { default as FormItem } from './components/Form/FormItem.svelte'

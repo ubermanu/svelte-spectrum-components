@@ -79,6 +79,9 @@ dependencies:
   '@spectrum-css/divider':
     specifier: ^2.0.29
     version: 2.0.29(@spectrum-css/tokens@8.1.1)
+  '@spectrum-css/fieldgroup':
+    specifier: ^4.0.33
+    version: 4.0.33(@spectrum-css/checkbox@6.0.18)(@spectrum-css/helptext@4.0.18)(@spectrum-css/icon@3.0.38)(@spectrum-css/radio@7.0.18)(@spectrum-css/tokens@8.1.1)
   '@spectrum-css/fieldlabel':
     specifier: ^6.0.19
     version: 6.0.19(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
@@ -994,6 +997,22 @@ packages:
     peerDependencies:
       '@spectrum-css/tokens': '>=8.0.0'
     dependencies:
+      '@spectrum-css/tokens': 8.1.1
+    dev: false
+
+  /@spectrum-css/fieldgroup@4.0.33(@spectrum-css/checkbox@6.0.18)(@spectrum-css/helptext@4.0.18)(@spectrum-css/icon@3.0.38)(@spectrum-css/radio@7.0.18)(@spectrum-css/tokens@8.1.1):
+    resolution: {integrity: sha512-O5I4XBrDjGQegh3VAfpWpsH93XmSS97IGHDzioBVzrfgHdrsdGo+Z5VGsDUGw90CNVAf10dy1R3GNceJSO42pg==}
+    peerDependencies:
+      '@spectrum-css/checkbox': ^5.0.0 || ^6.0.0
+      '@spectrum-css/helptext': ^3.0.0 || ^4.0.0
+      '@spectrum-css/icon': ^3.0.0
+      '@spectrum-css/radio': ^6.0.0 || ^7.0.0
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/checkbox': 6.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
+      '@spectrum-css/helptext': 4.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
+      '@spectrum-css/icon': 3.0.38(@spectrum-css/vars@9.0.2)
+      '@spectrum-css/radio': 7.0.18(@spectrum-css/icon@3.0.38)(@spectrum-css/tokens@8.1.1)
       '@spectrum-css/tokens': 8.1.1
     dev: false
 

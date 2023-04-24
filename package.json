@@ -73,6 +73,7 @@
     "@spectrum-css/contextualhelp": "^1.0.8",
     "@spectrum-css/dialog": "^6.0.35",
     "@spectrum-css/divider": "^2.0.29",
+    "@spectrum-css/fieldgroup": "^4.0.33",
     "@spectrum-css/fieldlabel": "^6.0.19",
     "@spectrum-css/helptext": "^4.0.18",
     "@spectrum-css/icon": "^3.0.38",
