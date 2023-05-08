@@ -16,6 +16,7 @@ export { default as Breadcrumb } from './components/Breadcrumb/Breadcrumb.svelte
 export { default as BreadcrumbItem } from './components/Breadcrumb/BreadcrumbItem.svelte'
 export { default as Button } from './components/Button/Button.svelte'
 export { default as ButtonGroup } from './components/Button/ButtonGroup.svelte'
+export { default as LinkButton } from './components/Button/LinkButton.svelte'
 export { default as Calendar } from './components/Calendar/Calendar.svelte'
 export { default as Card } from './components/Card/Card.svelte'
 export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
