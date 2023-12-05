@@ -1,0 +1,23 @@
+.spectrum-Examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.spectrum-Examples--vertical {
+    flex-direction: column;
+}
+
+.spectrum-Examples-item .spectrum-Examples-itemHeading {
+    margin-bottom: var(--spectrum-global-dimension-size-100);
+}
+
+.spectrum-Examples-itemGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+}

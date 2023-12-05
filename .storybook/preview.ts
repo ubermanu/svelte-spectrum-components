@@ -1,6 +1,7 @@
 import '$lib/styles.css'
 import type { Preview } from '@storybook/svelte'
 import ThemeDecorator from './ThemeDecorator.svelte'
+import './storybook.css'
 
 const preview: Preview = {
   parameters: {

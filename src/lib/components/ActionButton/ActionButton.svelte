@@ -4,7 +4,7 @@
   import type { ActionBarContext } from '$lib/components/ActionBar/ActionBar.svelte'
   import type { ActionGroupContext } from './ActionGroup.svelte'
   import Icon from '$lib/components/Icon/Icon.svelte'
-  import { CornerTriangle75 } from 'svelte-spectrum-icons'
+  import { CornerTriangle100 } from 'svelte-spectrum-icons'
 
   export let icon: SvelteComponent | undefined = undefined
   export let size: TShirtSize = 'M'
@@ -53,12 +53,16 @@
 >
   {#if hold}
     <Icon
-      icon={CornerTriangle75}
-      class="spectrum-UIIcon-CornerTriangle75 spectrum-ActionButton-icon"
+      icon={CornerTriangle100}
+      class="spectrum-UIIcon-CornerTriangle75 spectrum-ActionButton-hold"
     />
   {/if}
   {#if icon}
     <Icon {icon} {size} class="spectrum-ActionButton-icon" />
   {/if}
-  <span class="spectrum-ActionButton-label"><slot /></span>
+  {#if $$slots.default}
+    <span class="spectrum-ActionButton-label">
+      <slot />
+    </span>
+  {/if}
 </button>

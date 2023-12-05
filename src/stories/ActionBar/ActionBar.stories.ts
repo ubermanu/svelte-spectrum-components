@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 import type { SvelteComponent } from 'svelte'
-// @ts-ignore
-import { Copy18, Delete18, Edit18 } from 'svelte-spectrum-icons/workflow'
+import { Copy18, Delete18, Edit18 } from 'svelte-spectrum-icons'
 import ActionBar from './ActionBar.story.svelte'
 
 const meta: Meta<typeof ActionBar> = {
@@ -13,7 +12,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const actions: { text?: string; icon?: SvelteComponent }[] = [
+const actions: { text?: string; icon?: Partial<SvelteComponent> }[] = [
   { text: 'Edit', icon: Edit18 },
   { text: 'Copy', icon: Copy18 },
   { text: 'Delete', icon: Delete18 },
