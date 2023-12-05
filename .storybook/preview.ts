@@ -11,9 +11,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    darkMode: {
-      stylePreview: true,
-    },
   },
   // @ts-ignore
   decorators: [() => ThemeDecorator],

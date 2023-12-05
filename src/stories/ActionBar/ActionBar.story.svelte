@@ -5,10 +5,12 @@
   import ActionGroup from '$lib/components/ActionButton/ActionGroup.svelte'
   import ActionButton from '$lib/components/ActionButton/ActionButton.svelte'
 
+  export let emphasized: boolean = false
+
   export let actions: { text?: string; icon?: SvelteComponent }[] = []
 </script>
 
-<ActionBar open>
+<ActionBar open {emphasized}>
   <FieldLabel size="S">2 Selected</FieldLabel>
   <ActionGroup>
     {#each actions as action}

@@ -1,4 +1,4 @@
-export type TShirtSize = 'S' | 'M' | 'L' | 'XL'
+export type TShirtSize = 'XS' | 'S' | 'M' | 'L' | 'XL'
 
 export type PopoverPlacement =
   | 'top'
@@ -17,3 +17,5 @@ export type PopoverPlacement =
   | 'left bottom'
   | 'right top'
   | 'right bottom'
+
+export type Orientation = 'horizontal' | 'vertical'

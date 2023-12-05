@@ -1,3 +1,11 @@
+<script lang="ts" context="module">
+  export type ActionBarContext = {
+    open: boolean
+    emphasized: boolean
+    close: () => void
+  }
+</script>
+
 <script lang="ts">
   import { setContext, createEventDispatcher } from 'svelte'
   import { CloseButton, Popover } from '$lib'
@@ -12,7 +20,7 @@
     open = false
   }
 
-  setContext('actionBar', { emphasized, open, close })
+  setContext<ActionBarContext>('actionBar', { emphasized, open, close })
 </script>
 
 <div

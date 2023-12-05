@@ -19,32 +19,23 @@ const actions: { text?: string; icon?: SvelteComponent }[] = [
   { text: 'Delete', icon: Delete18 },
 ]
 
-export const WithIcon: Story = {
-  // @ts-ignore
-  render: () => ({
-    Component: ActionBar,
-    props: {
-      actions: actions.map(({ icon }) => ({ icon })),
-    },
-  }),
-}
-
-export const WithText: Story = {
-  // @ts-ignore
-  render: () => ({
-    Component: ActionBar,
-    props: {
-      actions: actions.map(({ text }) => ({ text })),
-    },
-  }),
-}
-
-export const WithTextAndIcon: Story = {
+export const Standard: Story = {
   // @ts-ignore
   render: () => ({
     Component: ActionBar,
     props: {
       actions,
+    },
+  }),
+}
+
+export const Emphasized: Story = {
+  // @ts-ignore
+  render: () => ({
+    Component: ActionBar,
+    props: {
+      actions,
+      emphasized: true,
     },
   }),
 }

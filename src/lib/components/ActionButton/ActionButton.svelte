@@ -1,26 +1,23 @@
 <script lang="ts">
-  import { getContext } from 'svelte'
-  import type { SvelteComponent } from 'svelte'
+  import { getContext, type SvelteComponent } from 'svelte'
   import CornerTriangle75 from 'svelte-spectrum-icons/ui/CornerTriangle.svelte'
-  import { Icon } from '$lib'
+  import type { ActionBarContext } from '$lib/components/ActionBar/ActionBar.svelte'
+  import Icon from '$lib/components/Icon/Icon.svelte'
   import type { TShirtSize } from '$lib/spectrum/types'
+  import type { ActionGroupContext } from './ActionGroup.svelte'
 
   export let icon: SvelteComponent | undefined = undefined
-
   export let size: TShirtSize = 'M'
 
   export const hold: boolean = false
-
   export let selected: boolean = false
-
   export let quiet: boolean = false
-
   export let emphasized: boolean = false
 
   export let staticWhite: boolean = false
   export let staticBlack: boolean = false
 
-  const actionGroup = getContext('actionGroup')
+  const actionGroup = getContext<ActionGroupContext>('actionGroup')
 
   // Set quiet and size to match the action group if it exists
   $: if (actionGroup) {
@@ -28,21 +25,27 @@
     size = actionGroup.size
   }
 
-  const actionBar = getContext('actionBar')
+  const actionBar = getContext<ActionBarContext>('actionBar')
 
   // Set as staticWhite if the action bar is emphasized
   if (actionBar && actionBar.emphasized) {
     staticWhite = true
   }
 
-  export let button: HTMLButtonElement
+  // TODO: Remove?
+  export let button: HTMLButtonElement | undefined = undefined
 
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
   bind:this={button}
-  class="spectrum-ActionButton spectrum-ActionButton--size{size} {additionalClasses}"
+  class="spectrum-ActionButton {additionalClasses}"
+  class:spectrum-ActionButton--sizeXS={size === 'XS'}
+  class:spectrum-ActionButton--sizeS={size === 'S'}
+  class:spectrum-ActionButton--sizeM={size === 'M'}
+  class:spectrum-ActionButton--sizeL={size === 'L'}
+  class:spectrum-ActionButton--sizeXL={size === 'XL'}
   class:spectrum-ActionButton--quiet={quiet}
   class:spectrum-ActionButton--emphasized={emphasized}
   class:spectrum-ActionButton--staticWhite={staticWhite}
