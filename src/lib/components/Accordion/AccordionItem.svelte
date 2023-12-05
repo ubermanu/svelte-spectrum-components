@@ -1,9 +1,9 @@
 <script lang="ts">
   import { getContext } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
+  import { melt, type Accordion } from '@melt-ui/svelte'
   import { Icon } from '$lib'
   import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
-  import type { AccordionContext } from './context'
 
   const id = uuid()
 
@@ -11,61 +11,46 @@
   export let disabled: boolean = false
   export let label: string = ''
 
-  const { openedItems, ...accordion } = getContext(
-    'accordion'
-  ) as AccordionContext
+  const accordion = getContext<Accordion>('accordion')
 
-  // If the item is open, add it to the list of opened items
+  const {
+    elements: { item, trigger, content },
+    states: { value },
+    helpers: { isSelected },
+  } = accordion
+
   if (open) {
-    accordion.openItem(id)
-  }
-
-  // Reflect the open state from the context
-  $: open = $openedItems.includes(id)
-
-  function handleClick() {
-    if (disabled) return
-    accordion.toggleItem(id)
+    $value?.push(id)
   }
 
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <div
-  class="spectrum-Accordion-item {additionalClasses}"
-  class:is-open={open}
+  use:melt={$item({ value: id, disabled })}
+  class="spectrum-Accordion-item"
+  class:is-open={$isSelected(id)}
   class:is-disabled={disabled}
-  role="presentation"
   {...rest}
 >
   <h3 class="spectrum-Accordion-itemHeading">
     <button
+      use:melt={$trigger(id)}
       class="spectrum-Accordion-itemHeader"
       type="button"
-      id="{id}-header"
-      aria-controls="{id}-content"
-      aria-expanded={open}
       {disabled}
-      on:click={handleClick}
-      on:click
-      on:keydown
-      on:keyup
-      on:keypress
     >
       {label}
     </button>
-    <Icon
-      icon={ChevronRight100}
-      class="spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
-    />
+    <span class="spectrum-Accordion-itemIconContainer">
+      <Icon
+        icon={ChevronRight100}
+        class="spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
+      />
+    </span>
   </h3>
 
-  <div
-    class="spectrum-Accordion-itemContent"
-    role="region"
-    id="{id}-content"
-    aria-labelledby="{id}-header"
-  >
+  <div use:melt={$content(id)} class="spectrum-Accordion-itemContent">
     <slot />
   </div>
 </div>

@@ -1,21 +1,39 @@
 <script lang="ts">
   import { setContext } from 'svelte'
-  import { createAccordionContext } from './context'
+  import { createAccordion, melt } from '@melt-ui/svelte'
+  import type { TShirtSize } from '$lib/spectrum/types'
+
+  export let appearance: 'compact' | 'regular' | 'spacious' = 'regular'
+  export let size: TShirtSize = 'M'
 
   export let multiple: boolean = false
+  export let disabled: boolean = false
 
-  const accordion = createAccordionContext({ multiple })
+  const accordion = createAccordion({
+    defaultValue: [],
+    multiple,
+    disabled,
+  })
 
-  // Update the multiple property on the context when the allowMultiple prop changes
-  const { config } = accordion
-  $: $config.multiple = multiple
+  const {
+    elements: { root },
+  } = accordion
 
-  // Pass the context to the children
   setContext('accordion', accordion)
 
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
-<div class="spectrum-Accordion {additionalClasses}" role="region" {...rest}>
+<div
+  use:melt={$root}
+  class="spectrum-Accordion"
+  class:spectrum-Accordion--sizeS={size === 'S'}
+  class:spectrum-Accordion--sizeM={size === 'M'}
+  class:spectrum-Accordion--sizeL={size === 'L'}
+  class:spectrum-Accordion--sizeXL={size === 'XL'}
+  class:spectrum-Accordion--compact={appearance === 'compact'}
+  class:spectrum-Accordion--spacious={appearance === 'spacious'}
+  {...rest}
+>
   <slot />
 </div>
