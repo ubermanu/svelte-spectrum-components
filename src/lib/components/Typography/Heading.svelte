@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { TShirtSizeAlt } from '$lib/spectrum/types'
+  import type { TShirtSize } from '$lib/spectrum/types'
 
   export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
-  export let size: TShirtSizeAlt | undefined = undefined
+  export let size: TShirtSize | undefined = undefined
   export let weight: 'light' | 'heavy' | undefined = undefined
   export let serif: boolean = false
 
-  const sizeMap: Record<number, TShirtSizeAlt> = {
+  const sizeMap: Record<number, TShirtSize> = {
     1: 'XL',
     2: 'L',
     3: 'M',

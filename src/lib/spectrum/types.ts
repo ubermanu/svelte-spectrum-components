@@ -1,5 +1,4 @@
-export type TShirtSize = 'XS' | 'S' | 'M' | 'L' | 'XL'
-export type TShirtSizeAlt = TShirtSize | 'XXS' | 'XXL' | 'XXXL'
+export type TShirtSize = 'XXS' | 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
 
 export type PopoverPlacement =
   | 'top'
