@@ -3,7 +3,7 @@
   import { createAccordion, melt } from '@melt-ui/svelte'
   import type { TShirtSize } from '$lib/spectrum/types'
 
-  export let appearance: 'compact' | 'regular' | 'spacious' = 'regular'
+  export let density: 'compact' | 'regular' | 'spacious' = 'regular'
   export let size: TShirtSize = 'M'
 
   export let multiple: boolean = false
@@ -31,8 +31,8 @@
   class:spectrum-Accordion--sizeM={size === 'M'}
   class:spectrum-Accordion--sizeL={size === 'L'}
   class:spectrum-Accordion--sizeXL={size === 'XL'}
-  class:spectrum-Accordion--compact={appearance === 'compact'}
-  class:spectrum-Accordion--spacious={appearance === 'spacious'}
+  class:spectrum-Accordion--compact={density === 'compact'}
+  class:spectrum-Accordion--spacious={density === 'spacious'}
   {...rest}
 >
   <slot />

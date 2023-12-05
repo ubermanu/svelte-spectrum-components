@@ -1,9 +1,11 @@
 <script lang="ts">
   import Accordion from '$lib/components/Accordion/Accordion.svelte'
   import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte'
+
+  export let multiple = false
 </script>
 
-<Accordion>
+<Accordion {multiple}>
   <AccordionItem label="Recent" open>
     <p>Item 1</p>
   </AccordionItem>
