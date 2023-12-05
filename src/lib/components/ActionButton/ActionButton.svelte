@@ -1,15 +1,15 @@
 <script lang="ts">
   import { getContext, type SvelteComponent } from 'svelte'
-  import CornerTriangle75 from 'svelte-spectrum-icons/ui/CornerTriangle.svelte'
-  import type { ActionBarContext } from '$lib/components/ActionBar/ActionBar.svelte'
-  import Icon from '$lib/components/Icon/Icon.svelte'
   import type { TShirtSize } from '$lib/spectrum/types'
+  import type { ActionBarContext } from '$lib/components/ActionBar/ActionBar.svelte'
   import type { ActionGroupContext } from './ActionGroup.svelte'
+  import Icon from '$lib/components/Icon/Icon.svelte'
+  import { CornerTriangle75 } from 'svelte-spectrum-icons'
 
   export let icon: SvelteComponent | undefined = undefined
   export let size: TShirtSize = 'M'
 
-  export const hold: boolean = false
+  export let hold: boolean = false
   export let selected: boolean = false
   export let quiet: boolean = false
   export let emphasized: boolean = false

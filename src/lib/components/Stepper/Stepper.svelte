@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ActionButton, Icon } from '$lib'
-  import ChevronRightSmall from 'svelte-spectrum-icons/ui/ChevronRightSmallMobile.svelte'
+  import { Chevron75 } from 'svelte-spectrum-icons'
 
   export let value: number = 0
   export let min: number = 0
@@ -51,7 +51,7 @@
       tabindex="-1"
       on:click={stepUp}
     >
-      <Icon icon={ChevronRightSmall} class="spectrum-UIIcon-ChevronUp75" />
+      <Icon icon={Chevron75} class="spectrum-UIIcon-ChevronUp75" />
     </ActionButton>
     <ActionButton
       class="spectrum-Stepper-stepDown"
@@ -60,7 +60,7 @@
       tabindex="-1"
       on:click={stepDown}
     >
-      <Icon icon={ChevronRightSmall} class="spectrum-UIIcon-ChevronDown75" />
+      <Icon icon={Chevron75} class="spectrum-UIIcon-ChevronDown75" />
     </ActionButton>
   </span>
 </div>

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { Icon } from '$lib'
   import type { TShirtSize } from '$lib/spectrum/types'
-  import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
-  import Dash100 from 'svelte-spectrum-icons/ui/DashSmall.svelte'
+  import { Checkmark100, Dash100 } from 'svelte-spectrum-icons/ui'
 
   export let label: string = ''
   export let disabled: boolean = false

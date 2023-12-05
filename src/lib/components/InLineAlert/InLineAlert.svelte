@@ -1,9 +1,7 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte'
   import { Icon } from '$lib'
-  import Info18 from 'svelte-spectrum-icons/workflow/Info18.svelte'
-  import CheckmarkCircle18 from 'svelte-spectrum-icons/workflow/CheckmarkCircle18.svelte'
-  import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
+  import { Alert18, CheckmarkCircle18, Info18 } from 'svelte-spectrum-icons'
 
   export let heading: string = ''
   export let variant: 'neutral' | 'info' | 'notice' | 'positive' | 'negative' =

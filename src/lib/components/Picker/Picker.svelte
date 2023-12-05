@@ -2,7 +2,7 @@
   import { tick } from 'svelte'
   import { Icon, Popover, Menu } from '$lib'
   import type { TShirtSize, PopoverPlacement } from '$lib/spectrum/types'
-  import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+  import { Chevron100 } from 'svelte-spectrum-icons'
 
   export let size: TShirtSize = 'M'
   export let quiet: boolean = false
@@ -106,7 +106,7 @@
     {selectedLabel || placeholder}
   </span>
   <Icon
-    icon={ChevronRight100}
+    icon={Chevron100}
     class="spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon"
   />
 </button>

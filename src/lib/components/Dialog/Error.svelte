@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { Dialog, Button } from '$lib'
-  import Alert18 from 'svelte-spectrum-icons/workflow/Alert18.svelte'
+  import { Alert18 } from 'svelte-spectrum-icons/workflow'
 
   const dispatch = createEventDispatcher()
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TShirtSize } from '$lib/spectrum/types'
   import { Button, Icon } from '$lib'
-  import { ChevronRightSmall as Chevron100 } from 'svelte-spectrum-icons/ui'
+  import { Chevron100 } from 'svelte-spectrum-icons'
   import { createEventDispatcher } from 'svelte'
 
   export let size: TShirtSize = 'M'

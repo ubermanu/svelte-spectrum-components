@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Icon } from '$lib'
-  import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+  import { Chevron100 } from 'svelte-spectrum-icons/ui'
 
   export let separator: boolean = false
 
@@ -28,7 +28,7 @@
   </slot>
   {#if separator}
     <Icon
-      icon={ChevronRight100}
+      icon={Chevron100}
       class="spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator"
     />
   {/if}

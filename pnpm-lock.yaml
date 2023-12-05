@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  svelte-spectrum-icons: link:../svelte-spectrum-icons
+
 dependencies:
   '@lukeed/uuid':
     specifier: ^2.0.1
@@ -251,8 +254,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1
   svelte-spectrum-icons:
-    specifier: ^2.1.0
-    version: 2.1.0
+    specifier: link:../svelte-spectrum-icons
+    version: link:../svelte-spectrum-icons
   tslib:
     specifier: ^2.6.2
     version: 2.6.2
@@ -9449,10 +9452,6 @@ packages:
     dependencies:
       svelte: 4.2.8
       tslib: 2.6.2
-    dev: true
-
-  /svelte-spectrum-icons@2.1.0:
-    resolution: {integrity: sha512-ebEh61LX6UYo86LJnQ++cOMpuZZQ1EYOD3j+5Gcn+VuZ0xe+jvoWhViWdpq1EgR1vGHaG7kjPHatnFFbE8pNiQ==}
     dev: true
 
   /svelte2tsx@0.6.27(svelte@4.2.8)(typescript@5.3.2):

@@ -2,7 +2,7 @@
   import { getContext, onMount, type SvelteComponent } from 'svelte'
   import { v4 as uuid } from '@lukeed/uuid'
   import { Icon } from '$lib'
-  import Checkmark100 from 'svelte-spectrum-icons/ui/CheckmarkSmall.svelte'
+  import { Checkmark100 } from 'svelte-spectrum-icons/ui'
 
   const id = uuid()
 

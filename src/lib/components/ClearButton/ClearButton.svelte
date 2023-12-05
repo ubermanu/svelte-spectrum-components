@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TShirtSize } from '$lib/spectrum/types'
   import { Icon } from '$lib'
-  import { CrossSmall as Cross } from 'svelte-spectrum-icons/ui'
+  import { Cross75 } from 'svelte-spectrum-icons'
 
   export let size: TShirtSize = 'M'
   export let overBackground: boolean = false
@@ -26,6 +26,6 @@
   on:click
 >
   <div class="spectrum-ClearButton-fill">
-    <Icon icon={Cross} {size} class="spectrum-Icon {iconClassName}" />
+    <Icon icon={Cross75} {size} class="spectrum-Icon {iconClassName}" />
   </div>
 </button>

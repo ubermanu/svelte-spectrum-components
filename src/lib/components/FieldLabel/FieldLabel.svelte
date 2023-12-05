@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TShirtSize } from '$lib/spectrum/types'
   import { Icon } from '$lib'
-  import { Asterisk as Asterisk100 } from 'svelte-spectrum-icons/ui'
+  import { Asterisk100 } from 'svelte-spectrum-icons'
 
   export let size: TShirtSize = 'M'
   export let position: 'left' | 'right' | '' = ''

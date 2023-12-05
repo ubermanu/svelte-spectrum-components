@@ -2,7 +2,7 @@
   import type { SvelteComponent } from 'svelte'
   import { Icon } from '$lib'
   import type { TShirtSize } from '$lib/spectrum/types'
-  import ChevronDown100 from 'svelte-spectrum-icons/ui/ChevronRightSmallMobile.svelte'
+  import { Chevron100 } from 'svelte-spectrum-icons/ui'
 
   export let size: TShirtSize = 'M'
   export let quiet: boolean = false
@@ -37,7 +37,7 @@
       <Icon {icon} class="spectrum-PickerButton-UIIcon" />
     {:else}
       <Icon
-        icon={ChevronDown100}
+        icon={Chevron100}
         class="spectrum-PickerButton-UIIcon spectrum-UIIcon-ChevronDown100"
       />
     {/if}

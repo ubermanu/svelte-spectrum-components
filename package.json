@@ -138,5 +138,10 @@
   "peerDependencies": {
     "svelte": "^3.54.0",
     "svelte-spectrum-icons": "^2.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "svelte-spectrum-icons": "link:../svelte-spectrum-icons"
+    }
   }
 }

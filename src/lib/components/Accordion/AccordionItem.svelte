@@ -3,7 +3,7 @@
   import { v4 as uuid } from '@lukeed/uuid'
   import { melt, type Accordion } from '@melt-ui/svelte'
   import { Icon } from '$lib'
-  import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightSmall.svelte'
+  import { Chevron100 } from 'svelte-spectrum-icons'
 
   const id = uuid()
 
@@ -44,8 +44,8 @@
     </button>
     <span class="spectrum-Accordion-itemIconContainer">
       <Icon
-        icon={ChevronRight100}
-        class="spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
+        icon={Chevron100}
+        class="spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator"
       />
     </span>
   </h3>

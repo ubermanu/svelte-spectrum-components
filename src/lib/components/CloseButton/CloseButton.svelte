@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Cross75 from 'svelte-spectrum-icons/ui/CrossMedium.svelte'
+  import { Cross75 } from 'svelte-spectrum-icons/ui'
   import { Icon } from '$lib'
   import type { TShirtSize } from '$lib/spectrum/types'
 

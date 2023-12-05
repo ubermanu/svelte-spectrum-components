@@ -5,7 +5,7 @@
   import { generateCalendarCells } from '$lib/utils/calendar'
 
   import { ActionButton, Icon } from '$lib'
-  import ChevronRight100 from 'svelte-spectrum-icons/ui/ChevronRightMedium.svelte'
+  import { Chevron100 } from 'svelte-spectrum-icons'
 
   const today = new Date()
 
@@ -66,7 +66,7 @@
       quiet
       on:click={goPrevMonth}
     >
-      <Icon icon={ChevronRight100} class="spectrum-UIIcon-ChevronLeft100" />
+      <Icon icon={Chevron100} class="spectrum-UIIcon-ChevronLeft100" />
     </ActionButton>
     <ActionButton
       aria-label="Next"
@@ -75,7 +75,7 @@
       quiet
       on:click={goNextMonth}
     >
-      <Icon icon={ChevronRight100} class="spectrum-UIIcon-ChevronRight100" />
+      <Icon icon={Chevron100} class="spectrum-UIIcon-ChevronRight100" />
     </ActionButton>
   </div>
   <div
