@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 import type { SvelteComponent } from 'svelte'
-import { Copy18, Delete18, Edit18 } from 'svelte-spectrum-icons'
+import { Copy18, Delete18, Edit18 } from '../../../../../svelte-spectrum-icons'
 import ActionBar from './ActionBar.story.svelte'
 
 const meta: Meta<typeof ActionBar> = {

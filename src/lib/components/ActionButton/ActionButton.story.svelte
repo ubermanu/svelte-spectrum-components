@@ -1,6 +1,6 @@
 <script lang="ts">
   import ActionButton from '$lib/components/ActionButton/ActionButton.svelte'
-  import { Edit18 } from 'svelte-spectrum-icons'
+  import { Edit18 } from '../../../../../svelte-spectrum-icons'
 
   const variants = [
     {},
