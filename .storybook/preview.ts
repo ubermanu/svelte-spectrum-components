@@ -1,5 +1,6 @@
 import '$lib/styles.css'
 import type { Preview } from '@storybook/svelte'
+import ThemeDecorator from './ThemeDecorator.svelte'
 
 const preview: Preview = {
   parameters: {
@@ -10,7 +11,12 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    darkMode: {
+      stylePreview: true,
+    },
   },
+  // @ts-ignore
+  decorators: [() => ThemeDecorator],
 }
 
 export default preview
