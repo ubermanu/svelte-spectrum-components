@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { TShirtSize } from '$lib/spectrum/types'
+  import type { TShirtSizeAlt } from '$lib/spectrum/types'
 
   export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
-  export let size: TShirtSize | 'XXS' | 'XXXL' | undefined = undefined
+  export let size: TShirtSizeAlt | undefined = undefined
   export let weight: 'light' | 'heavy' | undefined = undefined
   export let serif: boolean = false
 
-  const sizeMap = {
+  const sizeMap: Record<number, TShirtSizeAlt> = {
     1: 'XL',
     2: 'L',
     3: 'M',
@@ -15,6 +15,7 @@
     6: 'XXS',
   }
 
+  // Automatically set size based on level if not set
   if (!size) {
     size = sizeMap[level] ?? 'M'
   }
@@ -36,28 +37,10 @@
   additionalClasses = additionalClasses.trim()
 </script>
 
-{#if level === 1}
-  <h1 class={additionalClasses} {...rest}>
-    <slot />
-  </h1>
-{:else if level === 2}
-  <h2 class={additionalClasses} {...rest}>
-    <slot />
-  </h2>
-{:else if level === 3}
-  <h3 class={additionalClasses} {...rest}>
-    <slot />
-  </h3>
-{:else if level === 4}
-  <h4 class={additionalClasses} {...rest}>
-    <slot />
-  </h4>
-{:else if level === 5}
-  <h5 class={additionalClasses} {...rest}>
-    <slot />
-  </h5>
-{:else if level === 6}
-  <h6 class={additionalClasses} {...rest}>
-    <slot />
-  </h6>
-{/if}
+<svelte:element
+  this={`h${level}`}
+  class="spectrum-Heading {additionalClasses}"
+  {...rest}
+>
+  <slot />
+</svelte:element>
