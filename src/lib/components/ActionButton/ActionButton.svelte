@@ -32,14 +32,10 @@
     staticWhite = true
   }
 
-  // TODO: Remove?
-  export let button: HTMLButtonElement | undefined = undefined
-
   const { class: additionalClasses = '', ...rest } = $$restProps
 </script>
 
 <button
-  bind:this={button}
   class="spectrum-ActionButton {additionalClasses}"
   class:spectrum-ActionButton--sizeXS={size === 'XS'}
   class:spectrum-ActionButton--sizeS={size === 'S'}
